@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     "destTop", 3000);
 
   animateSlogan(
-    "and words lead to sentances.",
+    "and words lead to sentences.",
     "destBot", 5500);
 });
 
