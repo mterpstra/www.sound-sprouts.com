@@ -1,0 +1,164 @@
+* {
+  padding:0;
+  margin:0;
+}
+
+body {
+  background:linear-gradient(#e1f6e1, #2eb9da, #2f740a, #5c2d19);
+}
+
+#logo {
+  width:500px;
+}
+
+#name {
+  position:absolute;
+  top:80;
+  left:600;
+  width:500px;
+}
+
+#flowers {
+  background-image: url("flowers.png");
+  height:600px;
+  width:100%;
+  position: absolute;
+  bottom: 0px;
+  opacity: 0.15;
+}
+
+#content {
+  position:relative;
+  margin: 0 auto;
+  width: 1200px;
+  height: 100vh;
+}
+
+.stalk {
+  position:absolute;
+  bottom:0;
+  height:400px;
+}
+
+#stalk-left {
+  left:0;
+}
+#stalk-right {
+  right:0;
+}
+
+.dest{
+  position: absolute;
+  left: 250;
+  height: 50px;
+  width: 850px;
+}
+#destTop {
+  top: 600;
+}
+
+#destBot {
+  top: 670;
+}
+
+.letter {
+  position:absolute;
+  font-size: 45px;
+  line-height: 45px;
+  text-align:center;
+  font-family:"noteworthy";
+
+  background: -webkit-linear-gradient(#b9e8e0, #2bb9dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  filter: drop-shadow(2px 2px #333);
+}
+
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) { 
+    /* Nothing here yet... */
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (orientation: portrait) { 
+
+    #content {
+      text-align:center;
+      width:100%;
+      height:1650px;
+    }
+    #logo {
+      margin:50 auto 0 -20;
+    }
+
+    #name {
+      margin:50 auto;
+      position:static;
+    }
+
+    .stalk {
+      height:600px;
+    }
+
+    .dest {
+      left:150;
+    }
+
+    #destTop {
+      top: 1050;
+    }
+
+    #destBot {
+      top: 1120;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (orientation: landscape) { 
+    #content {
+      margin:0 auto;
+      width:1000px;
+      height:470px;
+    }
+    #logo {
+      width: 300px;
+      left: 150px;
+      position: absolute;
+    }
+
+    #name {
+      width: 300px;
+      left: 500;
+      top: 50;
+      position: absolute;
+    }
+
+    .stalk {
+      height:350px;
+    }
+
+    .dest {
+      left:150;
+    }
+
+    #destTop {
+      top: 250;
+    }
+
+    #destBot {
+      top: 320;
+    }
+}
