@@ -3,8 +3,74 @@
   margin:0;
 }
 
-body {
+.landing {
   background:linear-gradient(#e1f6e1, #2eb9da, #2f740a, #5c2d19);
+}
+
+.about {
+  background: #2f8ca1;
+}
+
+.about > div {
+  width:460px;
+  margin-right:50px;
+}
+
+.about > img {
+  height: 640px;
+  border-radius:10px;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(myfont.woff2);
+}
+
+.about h2 {
+  color: #f1fbd2;
+  font: normal normal normal 40px/1.35em futura-lt-w01-book,sans-serif;
+  margin-bottom:40px;
+}
+
+.about h3 {
+  text-align: start;
+  font: normal normal normal 18px/1.75em myfirstfont,cursive;
+  pointer-events: auto;
+  letter-spacing: normal;
+  line-height: 1.75em;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: 300;
+
+  margin-bottom:30px;
+}
+
+.about p {
+  font: normal normal normal 15px/1.875em avenir-lt-w01_35-light1475496,sans-serif;
+  pointer-events: auto;
+  letter-spacing: normal;
+  text-align: left;
+  line-height: 1.875em;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  color: #FFFFFF;
+}
+
+section {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
 }
 
 #logo {
@@ -92,6 +158,31 @@ body {
   and (max-device-width: 812px) 
   and (orientation: portrait) { 
 
+    section.about {
+      text-align:center;
+      flex-wrap:wrap;
+    }
+
+    .about > img {
+      height:auto;
+    }
+
+    .about > div {
+      width:90%;
+      margin:0 auto;
+    }
+
+    .about h2 {
+      font-size:4em;
+      text-align:left;
+    }
+    .about h3 {
+      font-size:3em;
+    }
+
+    .about p {
+      font-size:2em;
+    }
     #content {
       text-align:center;
       width:100%;
@@ -160,5 +251,9 @@ body {
 
     #destBot {
       top: 320;
+    }
+
+    .about > img {
+      height:450px;
     }
 }
