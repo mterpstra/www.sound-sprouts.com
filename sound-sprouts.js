@@ -1,11 +1,22 @@
 document.addEventListener('DOMContentLoaded', function(event) {
-  animateSlogan(
-    "Because sounds lead to words",
-    "destTop", 3000);
 
-  animateSlogan(
-    "and words lead to sentences.",
-    "destBot", 5500);
+
+  // For now, only animate in desktops.
+  if (typeof window.orientation == "undefined") {
+    console.log("Animating Slogan");
+
+    var line1=document.getElementById("destTop").textContent.trim();
+    var line2=document.getElementById("destBot").textContent.trim();
+
+    document.getElementById("destTop").innerHTML="";
+    document.getElementById("destBot").innerHTML="";
+
+    animateSlogan(line1, "destTop", 3000);
+    animateSlogan(line2, "destBot", 5500);
+
+  } else {
+    console.log("Mobile Device");
+  }
 });
 
 function animateSlogan(slogan, target, speed)

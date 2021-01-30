@@ -3,6 +3,19 @@
   margin:0;
 }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url(myfont.woff2);
+}
+
+section {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
+
 .landing {
   background:linear-gradient(#e1f6e1, #2eb9da, #2f740a, #5c2d19);
 }
@@ -19,11 +32,6 @@
 .about > img {
   height: 640px;
   border-radius:10px;
-}
-
-@font-face {
-  font-family: myFirstFont;
-  src: url(myfont.woff2);
 }
 
 .about h2 {
@@ -65,13 +73,6 @@
   color: #FFFFFF;
 }
 
-section {
-  display: flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height:100vh;
-}
 
 #logo {
   width:500px;
