@@ -1,17 +1,40 @@
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="sound-sprouts.css">
-    <script src="sound-sprouts.js"></script>
-  </head>
-  <body>
-    <div id="flowers"></div>
-    <div id="content">
-      <img src="logo.png" alt="" id="logo"/>
-      <img src="soundsprouts.png" alt="" id="name"/>
-      <img src="stalk_left_small.png" alt="" id="stalk-left" class="stalk"/>
-      <img src="stalk_right_small.png" alt="" id="stalk-right" class="stalk" />
-      <div id="destTop" class="dest"></div>
-      <div id="destBot" class="dest"></div>
-    </div>
-  </body>
+   <head>
+      <meta name="viewport" 
+            content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" 
+            type="text/css" 
+            href="sound-sprouts.css">
+
+      <link rel="stylesheet" 
+            media="(max-width: 800px)" 
+            href="mobile.css">
+
+      <script src="sound-sprouts.js"></script>
+
+   </head>
+   <body>
+      <div id="flowers"></div>
+      <div id="content">
+         <div id="logo">
+            <img src="logo.png" />
+         </div>
+         <div id="name">
+            <img src="soundsprouts.png" />
+         </div>
+         <div id=slogan>
+            <img src="stalk_left_small.png"/>
+            <div id="animation-container">
+               <div id="destTop">
+                  <p>Because sounds lead to words</p>
+               </div>
+               <div id="destBot">
+                  <p>and words lead to sentences.</p>
+               </div>
+            </div>
+            <img src="stalk_right_small.png"/>
+         </div>
+      </div>
+   </body>
 </html>
