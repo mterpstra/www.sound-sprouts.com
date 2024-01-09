@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1000px) {
+
+   .landing-page h1 {
+      font-size:80px;
+   }
+
+   .landing-page p {
+      font-size: 35px;
+      line-height: 55px;
+   }
+
+   .about-the-author, .papas-pool {
+      flex-direction:column
+   }
+
+   .dedes-pet-shop {
+      flex-direction:column-reverse;
+   }
+
+   .about-the-author img, .dedes-pet-shop img, .papas-pool img {
+      width:100%;
+      height:auto;
+      max-width:500px;
+   }
+
+   .about-the-author img {
+      width:80%;
+      max-width:400px;
+   }
+}

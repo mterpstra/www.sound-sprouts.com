@@ -1,0 +1,75 @@
+.landing-page {
+   padding:0;
+   height:100vh;
+   background:linear-gradient(#e1f6e1, #2eb9da, #2f740a, #5c2d19);
+   flex-direction:column;
+   justify-content:center;
+   align-items:center;
+}
+
+.landing-page h1 {
+   color:#fffc00;
+   font-family:"Snell Roundhand", cursive;
+   font-size:100px;
+   -webkit-text-fill-color:#fffc00;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: #ff3800;
+   filter: drop-shadow(2px 2px #333);
+   letter-spacing: 8px;
+   text-shadow: 2px 2px 2px #555;
+   text-align:center;
+}
+
+.landing-page p, .letter {
+   font-size: 45px;
+   line-height: 65px;
+   text-align:center;
+   font-family:"noteworthy";
+
+   background: -webkit-linear-gradient(#b9e8e0, #2bb9dc);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+
+   filter: drop-shadow(2px 2px #333);
+   letter-spacing:6px;
+}
+
+.landing-page img {
+   position:absolute;
+   left:10px;
+   top:10px;
+   height:150px;
+}
+
+.landing-page .header {
+   position:absolute;
+   top:10px;
+   right:0;
+}
+
+.landing-page .header a {
+   margin:20px 20px 0 0;
+   color: #2f740a;
+}
+
+.landing-page .header a:hover {
+   text-decoration:none;
+}
+
+.landing-page h1 {
+}
+
+.letter {
+   position:absolute;
+}
+
+#flowers {
+   background-image: url("../images/flowers.png");
+   background-repeat:repeat-x;
+   background-position:bottom;
+   height:600px;
+   width:100%;
+   position: absolute;
+   bottom: 0px;
+   opacity: 0.15;
+}

@@ -1,0 +1,10 @@
+.about-the-author {
+   background:rgb(71, 139, 186);
+   flex-direction:row;
+   align-items:center;
+}
+
+.about-the-author img {
+   border:50px outset rgb(43, 24, 17);
+   height:400px;
+}

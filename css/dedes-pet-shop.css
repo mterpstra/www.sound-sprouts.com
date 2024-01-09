@@ -1,0 +1,19 @@
+.dedes-pet-shop {
+   background:rgb(65, 75, 40);
+   flex-direction:row;
+   align-items:center;
+}
+
+.dedes-pet-shop img {
+   border-radius:50px;
+   height:500px;
+}
+
+.dedes-pet-shop p.buy-now {
+   margin-top:20px;
+}
+
+.dedes-pet-shop p.buy-now a {
+   color:#d2d2d2;
+}
+

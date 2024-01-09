@@ -1,0 +1,83 @@
+@keyframes move-left-to-right {
+   from {left:0px;}
+   to {left:100px;}
+}
+@keyframes move-right-to-left {
+   from {left:500px;}
+   to {left:400px;}
+}
+@keyframes show-center {
+   from {opacity:0;}
+   to {opacity:1;}
+}
+
+.ven-diagram {
+   background: rgb(202, 199, 128);
+}
+
+.ven-diagram-container {
+   position:relative;
+   height:500px;
+   width:1000px;
+   margin:0 auto;
+}
+.circle {
+   width:500px;
+   height:500px;
+   border-radius:50%;
+   position:absolute;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   background: rgba(71, 139, 186, 0.5);
+}
+
+.circle p {
+   color:#dddddd;
+   text-align:center;
+}
+
+#left-circle {
+   top:0;
+   left:0;
+}
+
+#right-circle {
+   top:0;
+   left:500;
+}
+
+.left-circle-animation {
+   animation-name: move-left-to-right;
+   animation-duration: 4s;
+   animation-fill-mode:forwards;
+   animation-delay:2s;
+}
+
+.right-circle-animation {
+   animation-name: move-right-to-left;
+   animation-duration: 4s;
+   animation-fill-mode:forwards;
+   animation-delay:2s;
+}
+
+#center-of-diagram {
+   height:500px;
+   width:200px;
+   position:absolute;
+   left:400px;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   opacity:0;
+   text-align:center;
+}
+
+.center-of-diagram-animation {
+   animation-name: show-center;;
+   animation-duration: 3s;
+   animation-fill-mode:forwards;
+   animation-delay:4s;
+}

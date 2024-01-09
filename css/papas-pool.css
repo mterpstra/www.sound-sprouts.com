@@ -1,0 +1,11 @@
+.papas-pool {
+   background:rgb(95, 62, 43);
+   flex-direction:row;
+   justify-content:center;
+   align-items:center;
+}
+
+.papas-pool img {
+   border-radius:50px;
+   max-width:600px;
+}
