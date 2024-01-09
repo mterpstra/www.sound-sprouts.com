@@ -36,26 +36,19 @@ document.addEventListener('DOMContentLoaded', function(event) {
    window.addEventListener("resize", handleResize);
 
 
-
-   // Create the observer
+   /*
+    * This is for the ven-diagram when that is ready.
    const observer = new IntersectionObserver(entries => {
-      // We will fill in the callback later...
-
-      // Loop over the entries
       entries.forEach(entry => {
          if (entry.isIntersecting) {
-            console.log("HERE");
             document.getElementById("left-circle").classList.add("left-circle-animation");
             document.getElementById("right-circle").classList.add("right-circle-animation");
             document.getElementById("center-of-diagram").classList.add("center-of-diagram-animation");
          }
       });
-
-
    });
-
-   // Tell the observer which elements to track
    observer.observe(document.querySelector('#center-of-diagram'));
+   */
 
 });
 
