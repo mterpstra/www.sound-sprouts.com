@@ -36,19 +36,18 @@ document.addEventListener('DOMContentLoaded', function(event) {
    window.addEventListener("resize", handleResize);
 
 
-   /*
-    * This is for the ven-diagram when that is ready.
-   const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-         if (entry.isIntersecting) {
-            document.getElementById("left-circle").classList.add("left-circle-animation");
-            document.getElementById("right-circle").classList.add("right-circle-animation");
-            document.getElementById("center-of-diagram").classList.add("center-of-diagram-animation");
-         }
+   if (document.getElementsByClassName("ven-diagram").length == 1) {
+      const observer = new IntersectionObserver(entries => {
+         entries.forEach(entry => {
+            if (entry.isIntersecting) {
+               document.getElementById("left-circle").classList.add("left-circle-animation");
+               document.getElementById("right-circle").classList.add("right-circle-animation");
+               document.getElementById("center-of-diagram").classList.add("center-of-diagram-animation");
+            }
+         });
       });
-   });
-   observer.observe(document.querySelector('#center-of-diagram'));
-   */
+      observer.observe(document.querySelector('#center-of-diagram'));
+   }
 
 });
 
