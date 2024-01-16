@@ -13,7 +13,17 @@
    margin-top:20px;
 }
 
-.dedes-pet-shop p.buy-now a {
-   color:#d2d2d2;
+.dedes-pet-shop .buy-now a {
+   background:linear-gradient(rgb(150, 95, 63), rgb(95, 62, 43));
+   border:2px solid rgb(44, 24, 12);
+   border-radius:10px;
+   color:white;
+   font-size:16px;
+   padding:12px 30px;
+}
+
+.dedes-pet-shop .buy-now a:hover {
+   cursor:pointer;
+   text-shadow: 2px 2px 10px black;
 }
 
