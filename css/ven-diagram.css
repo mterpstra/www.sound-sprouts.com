@@ -73,9 +73,30 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
+
+   background-image: url("../images/seed.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
 }
+
 #center-of-diagram h2 {
    text-align:center;
+   margin:0;
+
+   color:#fffc00;
+   font-family:DMSerifDisplay-Regular;
+   font-size:50px;
+   -webkit-text-fill-color:#fffc00;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #ff3800;
+   filter: drop-shadow(2px 2px #333);
+   letter-spacing: 8px;
+   text-shadow: 2px 2px 2px #555;
+   text-align:center;
+}
+#center-of-diagram img {
+   height:300px; 
 }
 
 .center-of-diagram-animation {

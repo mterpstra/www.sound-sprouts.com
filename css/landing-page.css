@@ -1,3 +1,8 @@
+@font-face {
+   font-family: dmSerifDisplay;
+   src: url(../fonts/DMSerifDisplay-Regular.ttf);
+}
+
 .landing-page {
    padding:0;
    height:100vh;
@@ -10,7 +15,7 @@
 
 .landing-page h1 {
    color:#fffc00;
-   font-family:"Snell Roundhand", cursive;
+   font-family:DMSerifDisplay-Regular;
    font-size:100px;
    -webkit-text-fill-color:#fffc00;
    -webkit-text-stroke-width: 2px;
