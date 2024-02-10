@@ -18,8 +18,45 @@ function handleResize() {
    }
 }
 
+document.addEventListener('DOMContentLoaded', function(event) {
+
+   if (document.getElementsByClassName("ven-diagram").length != 1) {
+      return;
+   }
+
+   window.addEventListener("resize", function(event) {
+      if (document.documentElement.clientWidth <= 1000) {
+         document.getElementById("left-circle").classList.remove("left-circle-animation");
+         document.getElementById("right-circle").classList.remove("right-circle-animation");
+         document.getElementById("center-of-diagram").classList.remove("center-of-diagram-animation");
+      }
+   });
+
+   const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+         if (entry.isIntersecting) {
+            if (document.documentElement.clientWidth > 1000) {
+               document.getElementById("left-circle").classList.add("left-circle-animation");
+               document.getElementById("right-circle").classList.add("right-circle-animation");
+               document.getElementById("center-of-diagram").classList.add("center-of-diagram-animation");
+
+               document.querySelector("#left-circle div:nth-child(2)").classList.add("shift-left-small");
+               document.querySelector("#left-circle div:nth-child(3)").classList.add("shift-left-big");
+               document.querySelector("#left-circle div:nth-child(4)").classList.add("shift-left-small");
+
+               document.querySelector("#right-circle div:nth-child(2)").classList.add("shift-right-small");
+               document.querySelector("#right-circle div:nth-child(3)").classList.add("shift-right-big");
+               document.querySelector("#right-circle div:nth-child(4)").classList.add("shift-right-big");
+               document.querySelector("#right-circle div:nth-child(5)").classList.add("shift-right-small");
+            }
+         }
+      });
+   });
+   observer.observe(document.querySelector('#center-of-diagram'));
+});
 
 document.addEventListener('DOMContentLoaded', function(event) {
+
    if (document.documentElement.clientWidth < 1200) {
       return;
    }
@@ -34,21 +71,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
    animateSlogan("destBot", 5500);
 
    window.addEventListener("resize", handleResize);
-
-
-   if (document.getElementsByClassName("ven-diagram").length == 1) {
-      const observer = new IntersectionObserver(entries => {
-         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-               document.getElementById("left-circle").classList.add("left-circle-animation");
-               document.getElementById("right-circle").classList.add("right-circle-animation");
-               document.getElementById("center-of-diagram").classList.add("center-of-diagram-animation");
-            }
-         });
-      });
-      observer.observe(document.querySelector('#center-of-diagram'));
-   }
-
 });
 
 

@@ -1,37 +1,59 @@
 @keyframes move-left-to-right {
-   from {left:0px;}
-   to {left:100px;}
+   from {transform: translate(0, 0)}
+   to {transform: translate(100px, 0)}
 }
 @keyframes move-right-to-left {
-   from {left:500px;}
-   to {left:400px;}
+   from {transform: translate(0, 0)}
+   to {transform: translate(-100px, 0)}
 }
 @keyframes show-center {
    from {opacity:0;}
    to {opacity:1;}
 }
 
+@keyframes shift-right-big {
+   from {transform: translate(0, 0)}
+   to {transform: translate(60px, 0)}
+}
+
+@keyframes shift-right-small {
+   from {transform: translate(0, 0)}
+   to {transform: translate(30px, 0)}
+}
+
+@keyframes shift-left-big {
+   from {transform: translate(0, 0)}
+   to {transform: translate(-60px, 0)}
+}
+@keyframes shift-left-small {
+   from {transform: translate(0, 0)}
+   to {transform: translate(-30px, 0)}
+}
+
 .ven-diagram {
    background: rgb(202, 199, 128);
+   padding-left:0;
+   padding-right:0;
 }
 
 .ven-diagram-container {
-   position:relative;
-   height:500px;
-   width:1000px;
-   margin:0 auto;
+   display:flex;
+   flex-direction:row;
+   justify-content:center;
+   align-items:center;
+   width:100%;
 }
 
 .circle {
+   aspect-ratio: 1/1;
    width:500px;
-   height:500px;
    border-radius:50%;
-   position:absolute;
+   background: rgba(71, 139, 186, 0.5);
    display:flex;
    flex-direction: column;
    justify-content: space-evenly;
    align-items: center;
-   background: rgba(71, 139, 186, 0.5);
+   flex-wrap:wrap;
 }
 
 .circle p {
@@ -39,40 +61,29 @@
    text-align:center;
 }
 
-#left-circle {
-   top:0;
-   left:0;
-}
-
-#right-circle {
-   top:0;
-   left:500px;
-}
-
 .left-circle-animation {
    animation-name: move-left-to-right;
    animation-duration: 4s;
    animation-fill-mode:forwards;
-   animation-delay:2s;
+   animation-delay:1s;
 }
 
 .right-circle-animation {
    animation-name: move-right-to-left;
    animation-duration: 4s;
    animation-fill-mode:forwards;
-   animation-delay:2s;
+   animation-delay:1s;
 }
 
 #center-of-diagram {
-   height:500px;
-   width:200px;
    position:absolute;
-   left:400px;
-   opacity:0;
+   height:500px;
+
    display:flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   opacity:0;
 
    background-image: url("../images/seed.png");
    background-position: center;
@@ -86,7 +97,7 @@
 
    color:#fffc00;
    font-family:DMSerifDisplay-Regular;
-   font-size:50px;
+   font-size:40px;
    -webkit-text-fill-color:#fffc00;
    -webkit-text-stroke-width: 1px;
    -webkit-text-stroke-color: #ff3800;
@@ -103,5 +114,35 @@
    animation-name: show-center;;
    animation-duration: 3s;
    animation-fill-mode:forwards;
-   animation-delay:4s;
+   animation-delay:3s;
 }
+
+
+.shift-left-small {
+   animation-name: shift-left-small;
+   animation-duration: 4s;
+   animation-fill-mode:forwards;
+   animation-delay:1s;
+}
+
+.shift-left-big {
+   animation-name: shift-left-big;
+   animation-duration: 4s;
+   animation-fill-mode:forwards;
+   animation-delay:1s;
+}
+
+.shift-right-small {
+   animation-name: shift-right-small;
+   animation-duration: 4s;
+   animation-fill-mode:forwards;
+   animation-delay:1s;
+}
+
+.shift-right-big {
+   animation-name: shift-right-big;
+   animation-duration: 4s;
+   animation-fill-mode:forwards;
+   animation-delay:1s;
+}
+

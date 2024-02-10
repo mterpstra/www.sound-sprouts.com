@@ -25,5 +25,59 @@
 
    .about-the-author img {
       width:80%;
+      max-width:500px;
    }
+
+   .ven-diagram-container {
+      flex-direction:column;
+   }
+
+   .circle {
+      aspect-ratio: 1/1;
+      width:80%;
+      max-width:400px;
+   }
+
+   .circle p {
+      font-size:14px;
+      line-height:18px;
+      margin-bottom:10px;
+   }
+
+   #left-circle {
+      transform: translate(0, 75px);
+   }
+
+   #left-circle div {
+      transform: translate(0, -40px);
+   }
+
+   #right-circle {
+      transform: translate(0, -75px);
+   }
+   #right-circle div {
+      transform: translate(0, 50px);
+   }
+
+   #center-of-diagram {
+      opacity:1;
+      background:none;
+   }
+
+   .circle {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+   }
+
+   .circle h2 {
+      text-align:center;
+   }
+
+   .circle div:first-child {
+      flex-basis: 100%;
+   }
+
 }
