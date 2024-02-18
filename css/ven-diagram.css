@@ -51,11 +51,16 @@
    background: rgba(71, 139, 186, 0.5);
    display:flex;
    flex-direction: column;
-   justify-content: space-evenly;
    align-items: center;
    flex-wrap:wrap;
+   justify-content: space-between;
+   box-sizing:border-box;
+   padding:50px;
 }
 
+.circle h2 {
+   text-align:center;
+}
 .circle p {
    color:#dddddd;
    text-align:center;
