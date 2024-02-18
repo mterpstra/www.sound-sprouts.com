@@ -45,3 +45,40 @@ section h2 {
 .show {
    visibility:visible;
 }
+
+
+.book {
+   position:relative;
+}
+
+.book button {
+   height:50px;
+   position:absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background:linear-gradient( rgb(71, 139, 186), rgb(63, 113, 147));
+   border:2px solid rgb(44, 24, 12);
+   opacity:0.9;
+   border-radius:10px;
+   color:white;
+   font-size:16px;
+   padding:12px 30px;
+   text-decoration:underline;
+}
+
+.book button:hover {
+   cursor:pointer;
+}
+
+.book .back {
+   display:none;
+}
+
+.book:hover .back {
+   display:inline-block;
+}
+
+.book:hover .front {
+   display:none;
+}

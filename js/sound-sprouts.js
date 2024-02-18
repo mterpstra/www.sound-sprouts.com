@@ -136,3 +136,14 @@ function animateSlogan(id, speed)
       left += letters[i].clientWidth;
    };
 }
+
+
+/*
+document.addEventListener('DOMContentLoaded', function(event) {
+
+   document.querySelector(".book button").onclick = function() {
+      console.log(this);
+      console.log(this.parentNode);
+   }
+});
+*/
