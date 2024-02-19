@@ -1,4 +1,3 @@
-
 function handleResize() {
    if (document.documentElement.clientWidth < 1200) {
       var divs = document.querySelectorAll("#destTop div, #destBot div");
@@ -138,12 +137,12 @@ function animateSlogan(id, speed)
 }
 
 
-/*
 document.addEventListener('DOMContentLoaded', function(event) {
 
    document.querySelector(".book button").onclick = function() {
-      console.log(this);
-      console.log(this.parentNode);
+      const list = this.parentNode.querySelectorAll("img");
+      for(i=0; i < list.length; i++) {
+         list[i].classList.toggle('hidden');
+      }
    }
 });
-*/

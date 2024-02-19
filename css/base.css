@@ -46,6 +46,9 @@ section h2 {
    visibility:visible;
 }
 
+.hidden {
+   display:none;
+}
 
 .book {
    position:relative;
@@ -69,16 +72,4 @@ section h2 {
 
 .book button:hover {
    cursor:pointer;
-}
-
-.book .back {
-   display:none;
-}
-
-.book:hover .back {
-   display:inline-block;
-}
-
-.book:hover .front {
-   display:none;
 }
