@@ -73,3 +73,19 @@ section h2 {
 .book button:hover {
    cursor:pointer;
 }
+
+.header {
+   position:absolute;
+   top:10px;
+   right:0;
+}
+
+.header a {
+   margin:20px 20px 0 0;
+   color: #2f740a;
+}
+
+.header a:hover {
+   text-decoration:none;
+}
+

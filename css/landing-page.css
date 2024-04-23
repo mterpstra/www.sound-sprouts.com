@@ -47,21 +47,6 @@
    height:150px;
 }
 
-.landing-page .header {
-   position:absolute;
-   top:10px;
-   right:0;
-}
-
-.landing-page .header a {
-   margin:20px 20px 0 0;
-   color: #2f740a;
-}
-
-.landing-page .header a:hover {
-   text-decoration:none;
-}
-
 .letter {
    position:absolute;
 }
