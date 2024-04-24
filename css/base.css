@@ -89,3 +89,17 @@ section h2 {
    text-decoration:none;
 }
 
+.brown-button a {
+   display:inline-block;
+   background:linear-gradient(rgb(150, 95, 63), rgb(95, 62, 43));
+   border:2px solid rgb(44, 24, 12);
+   border-radius:10px;
+   color:white;
+   font-size:16px;
+   padding:12px 30px;
+}
+
+.brown-button a:hover {
+   cursor:pointer;
+   text-shadow: 2px 2px 10px black;
+}
