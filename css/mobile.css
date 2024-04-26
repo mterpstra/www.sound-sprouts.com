@@ -92,6 +92,7 @@
    }
    .interactive-parts {
       flex-direction: column;
+      padding:50px;
    }
    .minimal-pairs {
       flex-direction: column;
