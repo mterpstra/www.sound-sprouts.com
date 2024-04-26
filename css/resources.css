@@ -113,6 +113,7 @@
 }
 .language-and-literacy iframe {
    height:300px;
+   max-width:100%;
    aspect-ratio: 4 / 3;
 }
 .language-and-literacy p {
