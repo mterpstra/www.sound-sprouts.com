@@ -55,6 +55,7 @@
    margin-top:20px;
    display:flex;
    flex-direction:row;
+   justify-content:center;
    gap:10px;
 }
 .coloring-book iframe {
@@ -133,6 +134,9 @@
 }
 .minimal-pairs iframe {
    height:387px;
+}
+.minimal-pairs .pair-sheet  {
+   text-align:center;
 }
 .minimal-pairs .pair-sheet p {
    text-align:center;
