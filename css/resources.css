@@ -67,6 +67,7 @@
    background:rgb(71, 139, 186);
    align-items:center;
    justify-content:space-between;
+   padding:100px 50px;
 }
 
 .interactive-parts .part img {
