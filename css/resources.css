@@ -26,7 +26,7 @@
    text-align:center;
    width:100%;
    top:calc(50% - 10px);
-   filter: drop-shadow(1px 1px #333);
+   filter: drop-shadow(2px 1px #333);
    text-shadow:1px 1px 1px #555;
 }
 .puppet img {
@@ -68,34 +68,35 @@
    justify-content:space-between;
 }
 
-.interactive-parts .part {
-   height:200px;
-   width:200px;
-   position:relative;
-   border:5px dashed black;
-   background:white;
-}
-
-.interactive-parts .part:nth-child(2) {
-   border-radius: 80px 300px 80px 80px;
-}
-.interactive-parts .part:nth-child(3) {
-   border-radius: 50%;
-   width:150px;
-}
-
-.interactive-parts .part:nth-child(3) img {
-   width:150px;
-}
-
-.interactive-parts .part:nth-child(4) {
-   border-radius: 10%;
-}
-
 .interactive-parts .part img {
    height:200px;
    width:200px; 
    object-fit: contain;
+   border:5px dashed black;
+   background:white;
+}
+
+.interactive-parts .part img.animals {
+   border-radius: 80px 300px 80px 80px;
+}
+
+.interactive-parts .part img.people {
+   border-radius: 50%;
+   padding: 10px;
+   width: 150px;
+   height: 180px;
+}
+
+.interactive-parts .part img.places {
+   padding: 0 20px;
+   border-radius: 20px;
+}
+
+.interactive-parts .part a {
+   color:white;
+}
+.interactive-parts .part p {
+   text-align:center;
 }
 
 .language-and-literacy {
