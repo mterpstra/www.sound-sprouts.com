@@ -111,7 +111,7 @@
 .language-and-literacy div:first-child p {
    text-align:left;
 }
-.language-and-literacy embed {
+.language-and-literacy iframe {
    width:300px;
    aspect-ratio: 4 / 3;
 }
