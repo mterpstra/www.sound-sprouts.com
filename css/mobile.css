@@ -97,4 +97,8 @@
    .minimal-pairs {
       flex-direction: column;
    }
+
+   .resources-intro {
+      padding-top:30px;
+   }
 }
