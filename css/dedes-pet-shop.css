@@ -11,4 +11,9 @@
 
 .dedes-pet-shop p.buy-now {
    margin-top:20px;
+   margin-bottom:20px;
+}
+
+.dedes-pet-shop a {
+   color:white;
 }
