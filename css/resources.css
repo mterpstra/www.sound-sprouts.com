@@ -1,3 +1,37 @@
+.resources-intro {
+   background:linear-gradient(#e1f6e1, #2eb9da, #2f740a, #5c2d19);
+   flex-wrap:wrap;
+   justify-content:center;
+   align-items:center;
+   height:100vh;
+   padding:0;
+}
+.resources-intro img {
+   width:300px;
+   width:300px;
+   object-fit: contain;
+}
+.resources-intro .speech-bubble {
+   background:rgb(250, 250, 200);
+   border-radius:20px;
+   text-align:center;
+   max-width:800px;
+   margin:20px;
+}
+.resources-intro .speech-bubble p {
+   margin:20px;
+   color:rgb(65, 75, 40);
+}
+.resources-intro .speech-bubble .arrow {
+   border-right: 50px solid rgb(250, 250, 200);
+   border-top: 20px solid transparent;
+   border-bottom: 20px solid transparent;
+   border-left: 0;
+   position: absolute;
+   left: -50px;
+   top: 120px;
+}
+
 .puppets {
    background: rgb(202, 199, 128);
    flex-direction:row;
@@ -5,7 +39,7 @@
    justify-content:space-evenly;
    gap:0;
 }
-.puppets > div:nth-child(2) {
+.puppets > div:nth-child(1) {
    width:100%;
    margin-bottom:10px;
 }
@@ -145,4 +179,14 @@
 }
 .minimal-pairs .pair-sheet p a {
    color:white;
+}
+#flowers {
+   background-image: url("../images/flowers.png");
+   background-repeat:repeat-x;
+   background-position:bottom;
+   height:600px;
+   width:100%;
+   position: absolute;
+   bottom: 0px;
+   opacity: 0.15;
 }

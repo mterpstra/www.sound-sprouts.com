@@ -10,7 +10,6 @@
    flex-direction:column;
    justify-content:center;
    align-items:center;
-   position:relative;
 }
 
 .landing-page h1 {
@@ -38,13 +37,6 @@
 
    filter: drop-shadow(2px 2px #333);
    letter-spacing:6px;
-}
-
-.landing-page img {
-   position:absolute;
-   left:10px;
-   top:10px;
-   height:150px;
 }
 
 .letter {
