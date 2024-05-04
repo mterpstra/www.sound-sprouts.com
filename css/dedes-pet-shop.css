@@ -9,11 +9,12 @@
    height:500px;
 }
 
-.dedes-pet-shop p.buy-now {
-   margin-top:20px;
-   margin-bottom:20px;
-}
-
 .dedes-pet-shop a {
    color:white;
+}
+
+.button-set {
+   margin-top:20px;
+   display:flex;
+   gap:20px;
 }
