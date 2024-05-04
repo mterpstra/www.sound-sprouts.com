@@ -42,14 +42,3 @@
 .letter {
    position:absolute;
 }
-
-#flowers {
-   background-image: url("../images/flowers.png");
-   background-repeat:repeat-x;
-   background-position:bottom;
-   height:600px;
-   width:100%;
-   position: absolute;
-   bottom: 0px;
-   opacity: 0.15;
-}
