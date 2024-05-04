@@ -6,6 +6,7 @@
    min-height:100vh;
    padding:0;
    gap:0;
+   position:relative;
 }
 .resources-intro img {
    width:300px;
