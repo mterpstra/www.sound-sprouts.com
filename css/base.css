@@ -95,6 +95,15 @@ section h2 {
    left:10px;
 }
 
+.button-set {
+   margin-top:20px;
+   display:flex;
+   flex-direction:row;
+   justify-content:left;
+   gap:20px;
+   flex-wrap:wrap;
+}
+
 .brown-button a {
    display:inline-block;
    background:linear-gradient(rgb(150, 95, 63), rgb(95, 62, 43));
