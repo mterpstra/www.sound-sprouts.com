@@ -100,5 +100,6 @@
 
    .resources-intro {
       padding-top:30px;
+      flex-direction:column;
    }
 }

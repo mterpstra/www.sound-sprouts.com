@@ -1,6 +1,5 @@
 .resources-intro {
    background:linear-gradient(#e1f6e1, #2eb9da, #2f740a, #5c2d19);
-   flex-wrap:wrap;
    justify-content:center;
    align-items:center;
    min-height:100vh;
