@@ -78,15 +78,6 @@
    opacity:1;
 }
 
-.coloring-book {
-   background: rgb(65, 75, 40);
-   align-items:center;
-}
-.coloring-book img {
-   height:400px;
-   border-radius:10px;
-}
-
 .interactive-parts {
    background:rgb(71, 139, 186);
    align-items:center;

@@ -1,0 +1,11 @@
+.coloring-book {
+   background: rgb(65, 75, 40);
+   align-items:center;
+}
+.coloring-book img {
+   border-radius:10px;
+   width:500px;
+}
+.coloring-book .brown-button {
+   margin-top:20px;
+}

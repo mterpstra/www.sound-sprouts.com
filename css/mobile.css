@@ -84,12 +84,6 @@
       flex-basis: 100%;
    }
 
-   .coloring-book {
-      flex-direction: column;
-   }
-   .coloring-book iframe {
-      max-width:100%;
-   }
    .interactive-parts {
       flex-direction: column;
       padding:50px;
@@ -102,4 +96,13 @@
       padding-top:30px;
       flex-direction:column;
    }
+
+   .coloring-book {
+      flex-direction:column;
+   }
+   .coloring-book img {
+      max-width:100%;
+   }
+
+
 }
