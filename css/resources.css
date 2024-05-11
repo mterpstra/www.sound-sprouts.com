@@ -82,9 +82,9 @@
    background: rgb(65, 75, 40);
    align-items:center;
 }
-.coloring-book iframe {
+.coloring-book img {
    height:400px;
-   aspect-ratio: 4 / 3;
+   border-radius:10px;
 }
 
 .interactive-parts {
