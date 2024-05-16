@@ -91,6 +91,7 @@
    object-fit: contain;
    border:5px dashed black;
    background:white;
+   padding:5px;
 }
 
 .interactive-parts .part img.animals {
