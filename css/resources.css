@@ -110,6 +110,10 @@
    border-radius: 20px;
 }
 
+.interactive-parts .part img.things {
+   border-radius: 50%;
+}
+
 .interactive-parts .part a {
    color:white;
 }
