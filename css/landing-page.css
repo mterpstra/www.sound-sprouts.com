@@ -3,6 +3,11 @@
    src: url(../fonts/DMSerifDisplay-Regular.ttf);
 }
 
+@font-face {
+   font-family: chewy;
+   src: url(../fonts/Chewy-Regular.ttf);
+}
+
 .landing-page {
    padding:0;
    height:100vh;
@@ -15,7 +20,7 @@
 
 .landing-page h1 {
    color:#fffc00;
-   font-family:DMSerifDisplay-Regular;
+   font-family:dmSeriDisplay;
    font-size:100px;
    -webkit-text-fill-color:#fffc00;
    -webkit-text-stroke-width: 2px;

@@ -1,9 +1,14 @@
+@font-face {
+   font-family: unkempt;
+   src: url(../fonts/Unkempt-Regular.ttf);
+}
+
 * {
    margin:0;
    padding:0;
 }
 
-p, h1, h2 {
+p, h1 {
    font-family:
    "Proxima Nova",
    -apple-system,
@@ -19,6 +24,12 @@ p, h1, h2 {
    "Noto Color Emoji";
 
    color:white;
+}
+
+h2 {
+   font-family:unkempt;
+   color:white;
+   letter-spacing: 0.1em;
 }
 
 p {
