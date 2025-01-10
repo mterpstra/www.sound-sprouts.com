@@ -137,12 +137,30 @@ function animateSlogan(id, speed)
 }
 
 
+/*
+ *
+ * <img src=00 />
+ * <img src=01 hidden />
+ * <img src=02 hidden />
+ *
+ */
 document.addEventListener('DOMContentLoaded', function(event) {
-
-   document.querySelector(".book button").onclick = function() {
-      const list = this.parentNode.querySelectorAll("img");
-      for(i=0; i < list.length; i++) {
-         list[i].classList.toggle('hidden');
-      }
-   }
+   const books = document.querySelectorAll(".book button");
+   books.forEach((book) => {
+      book.addEventListener('click', (event) => {
+         const list = event.target.parentNode.querySelectorAll("img");
+         for(i=0; i < list.length; i++) {
+            if (list[i].classList.contains("hidden")) {
+               continue
+            }
+            list[i].classList.add("hidden");
+            if (i+1 >= list.length) {
+               list[0].classList.remove("hidden");
+            } else {
+               list[i+1].classList.remove("hidden");
+            }
+            break;
+         }
+      });
+   });
 });
