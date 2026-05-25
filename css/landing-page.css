@@ -231,7 +231,7 @@
 .badge-t {
    background: var(--ss-butter);
    top: 12%;
-   left: -6%;
+   left: -32px;
 }
 
 .badge-d {
