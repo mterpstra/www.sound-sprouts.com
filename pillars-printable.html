@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>The Pillars of Reading · Sound Sprouts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300..700&display=swap" rel="stylesheet" />
+<style>
+  /* ───── Print page sizing ───── */
+  @page { size: 8.5in 11in; margin: 0; }
+  @media print {
+    html, body { margin: 0; padding: 0; background: #F5F1E8; -webkit-print-color-adjust: exact; print-color-adjust: exact; color-adjust: exact; }
+    .page { box-shadow: none; margin: 0; }
+  }
+  /* On-screen preview: show the page floating on a neutral background */
+  html, body { margin: 0; padding: 0; background: #2a2a2a; font-family: 'Inter', -apple-system, sans-serif; color: #2A2E22; }
+
+  /* The page itself — designed at 816×1056 px (letter @ 96dpi). */
+  .page {
+    width: 8.5in;
+    height: 11in;
+    background: #F5F1E8;
+    margin: 24px auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    padding: 0.45in;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ───── Header ───── */
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.1in;
+  }
+  .head .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18pt;
+    font-weight: 500;
+    color: #3D5841;
+    letter-spacing: -0.5px;
+  }
+  .head .brand .accent { color: #C97A56; }
+  .head .meta {
+    font-size: 8pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #5C5F50;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+
+  /* ───── Title strip ───── */
+  .title-strip {
+    margin-bottom: 0.15in;
+  }
+  .title-strip .eyebrow {
+    font-size: 7pt;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #C97A56;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .title-strip h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 36pt;
+    line-height: 0.95;
+    letter-spacing: -1.5px;
+    font-weight: 400;
+    margin: 0;
+    color: #2A2E22;
+  }
+  .title-strip h1 .pillars { font-style: italic; color: #3D5841; }
+  .title-strip h1 .reading { font-style: italic; color: #C97A56; }
+  .title-strip p {
+    font-size: 9pt;
+    color: #5C5F50;
+    line-height: 1.4;
+    margin: 6px 0 0 0;
+    max-width: 5in;
+  }
+
+  /* ───── Body: 2-column (plant left, cards right) ───── */
+  .body {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 4.35in 3.0in;
+    gap: 0.25in;
+    align-items: stretch;
+    min-height: 0;
+  }
+  .plant-col {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .plant-col svg { width: 100%; height: auto; display: block; }
+  .cards-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.08in;
+  }
+
+  /* ───── Pillar card ───── */
+  .pillar {
+    background: #FBF8F1;
+    border: 0.5px solid rgba(42,46,34,0.16);
+    border-radius: 6pt;
+    padding: 7pt 11pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .pillar .row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 3pt;
+  }
+  .pillar .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14pt;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.3px;
+    flex-shrink: 0;
+  }
+  .pillar .name {
+    font-family: 'Fraunces', serif;
+    font-size: 12pt;
+    font-weight: 500;
+    color: #2A2E22;
+    letter-spacing: -0.2px;
+    line-height: 1.1;
+  }
+  .pillar .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7pt;
+  }
+  .pillar .lbl {
+    font-size: 5.5pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2pt;
+    font-family: 'Inter', sans-serif;
+  }
+  .pillar .lbl.means { color: inherit; }
+  .pillar .lbl.matters { color: #5C5F50; }
+  .pillar .desc {
+    font-size: 7.5pt;
+    color: #2A2E22;
+    line-height: 1.4;
+    font-family: 'Inter', sans-serif;
+  }
+  .pillar .desc.muted { color: #5C5F50; }
+  .pillar .foot {
+    margin-top: 4pt;
+    padding: 3pt 7pt;
+    background: #F5F1E8;
+    border-radius: 3pt;
+    font-size: 6.5pt;
+    color: #3D5841;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .pillar.p1 .num, .pillar.p1 .lbl.means { color: #3D5841; }
+  .pillar.p2 .num, .pillar.p2 .lbl.means { color: #3D5841; }
+  .pillar.p3 .num, .pillar.p3 .lbl.means { color: #6B8A6E; }
+  .pillar.p4 .num, .pillar.p4 .lbl.means { color: #8FA88E; }
+  .pillar.p5 .num, .pillar.p5 .lbl.means { color: #C97A56; }
+
+  /* Proportional heights matching SVG plant zones (zone boundaries at marker midpoints) */
+  .pillar.p5 { flex: 372; }
+  .pillar.p4 { flex: 298; }
+  .pillar.p3 { flex: 259; }
+  .pillar.p2 { flex: 273; }
+  .pillar.p1 { flex: 288; }
+
+  /* ───── Footer ───── */
+  .foot-strip {
+    margin-top: 0.12in;
+    padding-top: 0.1in;
+    border-top: 0.5px solid rgba(42,46,34,0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+  }
+  .foot-strip .left {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .foot-strip .tag {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 10pt;
+    color: #3D5841;
+    font-weight: 500;
+  }
+  .foot-strip .url {
+    font-size: 7pt;
+    color: #5C5F50;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+
+  /* Print: nudge text colors slightly darker for ink */
+  @media print { .pillar .desc.muted, .head .meta, .foot-strip .url { color: #4A4F40; } }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="head">
+    <div class="brand">
+      <!-- Inline logo mark -->
+      <svg width="22" height="22" viewBox="0 0 64 64" fill="none">
+        <path d="M32 58 Q32 44 32 30" stroke="#3D5841" stroke-width="3.5" stroke-linecap="round" />
+        <path d="M32 36 Q44 32 50 22 Q42 22 36 28 Q32 32 32 36" fill="#3D5841" />
+        <path d="M32 28 Q24 26 18 18 Q24 18 28 22 Q32 24 32 28" fill="#3D5841" />
+        <path d="M22 62 Q32 58 42 62" stroke="#7A4F2E" stroke-width="2" stroke-linecap="round" />
+        <circle cx="32" cy="22" r="3" fill="#C97A56" />
+      </svg>
+      Sound <span class="accent">Sprouts</span>
+    </div>
+    <div class="meta">A Literacy Framework</div>
+  </div>
+
+  <!-- Title -->
+  <div class="title-strip">
+    <div class="eyebrow">For parents · teachers · speech-language pathologists</div>
+    <h1>The <span class="pillars">pillars</span> of <span class="reading">reading</span>.</h1>
+    <p>Reading isn't a tower — it's a plant. Listening and speaking are the roots that anchor everything. Each layer above feeds the next, until comprehension blooms at the top.</p>
+  </div>
+
+  <!-- Body -->
+  <div class="body">
+
+    <!-- Plant illustration -->
+    <div class="plant-col">
+      <svg viewBox="0 0 800 1490" fill="none" preserveAspectRatio="xMidYMin meet">
+        <defs>
+          <radialGradient id="bloomGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#E8C77D" />
+            <stop offset="60%" stop-color="#C97A56" />
+            <stop offset="100%" stop-color="#A55E3D" />
+          </radialGradient>
+          <linearGradient id="soilGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#9C6F4E" />
+            <stop offset="100%" stop-color="#5C3A1F" />
+          </linearGradient>
+          <pattern id="soilGrain" width="6" height="6" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="0.8" fill="#5C3A1F" opacity="0.4" />
+            <circle cx="5" cy="4" r="0.6" fill="#9C6F4E" opacity="0.5" />
+          </pattern>
+        </defs>
+
+        <!-- SOIL -->
+        <rect x="0" y="1230" width="800" height="260" fill="url(#soilGrad)" />
+        <rect x="0" y="1230" width="800" height="260" fill="url(#soilGrain)" opacity="0.5" />
+        <path d="M 0 1230 Q 200 1200 400 1235 Q 600 1265 800 1228 L 800 1245 Q 600 1280 400 1252 Q 200 1218 0 1248 Z" fill="#5C3A1F" opacity="0.5" />
+
+        <!-- Scattered seeds in soil -->
+        <circle cx="120" cy="1340" r="4" fill="#C97A56" opacity="0.55" />
+        <circle cx="250" cy="1420" r="3" fill="#C97A56" opacity="0.55" />
+        <circle cx="540" cy="1380" r="4" fill="#C97A56" opacity="0.55" />
+        <circle cx="670" cy="1460" r="3" fill="#C97A56" opacity="0.55" />
+        <circle cx="320" cy="1520" r="3" fill="#C97A56" opacity="0.55" />
+        <circle cx="60"  cy="1490" r="2" fill="#C97A56" opacity="0.55" />
+
+        <!-- ROOTS -->
+        <path d="M 400 1230 Q 405 1340 395 1450 Q 390 1530 405 1580" stroke="#3D5841" stroke-width="9" fill="none" stroke-linecap="round" />
+        <path d="M 400 1280 Q 320 1310 250 1370 Q 200 1420 160 1490" stroke="#3D5841" stroke-width="7" fill="none" stroke-linecap="round" />
+        <path d="M 280 1350 Q 240 1390 200 1450" stroke="#3D5841" stroke-width="4" fill="none" stroke-linecap="round" />
+        <path d="M 220 1430 Q 180 1470 140 1530" stroke="#3D5841" stroke-width="3" fill="none" stroke-linecap="round" />
+        <path d="M 400 1280 Q 480 1310 560 1370 Q 620 1430 660 1500" stroke="#3D5841" stroke-width="7" fill="none" stroke-linecap="round" />
+        <path d="M 540 1360 Q 590 1400 620 1460" stroke="#3D5841" stroke-width="4" fill="none" stroke-linecap="round" />
+        <path d="M 590 1430 Q 640 1470 680 1540" stroke="#3D5841" stroke-width="3" fill="none" stroke-linecap="round" />
+        <path d="M 400 1380 Q 360 1410 340 1470" stroke="#3D5841" stroke-width="3" fill="none" stroke-linecap="round" />
+        <path d="M 400 1380 Q 440 1410 460 1470" stroke="#3D5841" stroke-width="3" fill="none" stroke-linecap="round" />
+
+        <circle cx="160" cy="1490" r="4" fill="#C97A56" />
+        <circle cx="660" cy="1500" r="4" fill="#C97A56" />
+        <circle cx="405" cy="1580" r="4" fill="#C97A56" />
+        <circle cx="200" cy="1450" r="4" fill="#C97A56" />
+        <circle cx="620" cy="1460" r="4" fill="#C97A56" />
+        <circle cx="140" cy="1530" r="4" fill="#C97A56" />
+        <circle cx="680" cy="1540" r="4" fill="#C97A56" />
+        <circle cx="340" cy="1470" r="4" fill="#C97A56" />
+        <circle cx="460" cy="1470" r="4" fill="#C97A56" />
+
+        <!-- Root labels -->
+        <g transform="translate(180, 1390)">
+          <rect x="-60" y="-16" width="120" height="32" rx="16" fill="#F5F1E8" stroke="#3D5841" stroke-width="2" />
+          <text x="0" y="6" text-anchor="middle" font-family="Fraunces, serif" font-size="18" font-style="italic" font-weight="500" fill="#3D5841">Listening</text>
+        </g>
+        <g transform="translate(620, 1390)">
+          <rect x="-60" y="-16" width="120" height="32" rx="16" fill="#F5F1E8" stroke="#3D5841" stroke-width="2" />
+          <text x="0" y="6" text-anchor="middle" font-family="Fraunces, serif" font-size="18" font-style="italic" font-weight="500" fill="#3D5841">Speaking</text>
+        </g>
+
+        <!-- STEM -->
+        <path d="M 400 1230 Q 405 1100 398 970 Q 392 850 400 360" stroke="#3D5841" stroke-width="22" fill="none" stroke-linecap="round" />
+        <path d="M 400 1230 Q 405 1100 398 970 Q 392 850 400 360" stroke="#6B8A6E" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.6" />
+
+        <!-- LEAVES — fluency (lower) -->
+        <path d="M 400 870 Q 280 850 200 770 Q 180 740 200 730 Q 280 720 360 780 Q 395 820 400 870 Z" fill="#6B8A6E" />
+        <path d="M 400 870 Q 340 830 290 790 Q 250 760 220 740" stroke="#3D5841" stroke-width="2" fill="none" opacity="0.4" />
+        <path d="M 400 850 Q 520 830 600 750 Q 620 720 600 710 Q 520 700 440 760 Q 410 800 400 850 Z" fill="#6B8A6E" />
+        <path d="M 400 850 Q 460 810 510 770 Q 550 740 580 720" stroke="#3D5841" stroke-width="2" fill="none" opacity="0.4" />
+
+        <!-- LEAVES — lower stem pair 1 -->
+        <path d="M 400 1005 Q 305 982 240 910 Q 220 880 240 870 Q 305 860 370 925 Q 394 966 400 1005 Z" fill="#6B8A6E" />
+        <path d="M 400 1005 Q 342 972 292 938 Q 255 908 232 878" stroke="#3D5841" stroke-width="2" fill="none" opacity="0.4" />
+        <path d="M 400 982 Q 495 959 560 887 Q 580 857 560 847 Q 495 837 438 902 Q 410 944 400 982 Z" fill="#6B8A6E" />
+        <path d="M 400 982 Q 455 949 505 915 Q 545 882 562 855" stroke="#3D5841" stroke-width="2" fill="none" opacity="0.4" />
+
+        <!-- LEAVES — lower stem pair 2 -->
+        <path d="M 400 1100 Q 315 1077 255 1008 Q 237 980 255 970 Q 315 960 374 1022 Q 395 1061 400 1100 Z" fill="#6B8A6E" />
+        <path d="M 400 1100 Q 348 1068 302 1038 Q 267 1010 248 982" stroke="#3D5841" stroke-width="2" fill="none" opacity="0.4" />
+        <path d="M 400 1077 Q 485 1054 545 985 Q 563 957 545 947 Q 485 937 440 999 Q 412 1039 400 1077 Z" fill="#6B8A6E" />
+        <path d="M 400 1077 Q 448 1045 492 1013 Q 528 982 547 955" stroke="#3D5841" stroke-width="2" fill="none" opacity="0.4" />
+
+        <!-- LEAVES — vocabulary (canopy) -->
+        <path d="M 400 700 Q 240 680 130 580 Q 100 530 130 510 Q 240 500 340 580 Q 390 640 400 700 Z" fill="#8FA88E" />
+        <path d="M 400 700 Q 320 660 250 620 Q 190 570 150 540" stroke="#3D5841" stroke-width="2" fill="none" opacity="0.4" />
+        <path d="M 400 680 Q 560 660 670 560 Q 700 510 670 490 Q 560 480 460 560 Q 410 620 400 680 Z" fill="#8FA88E" />
+        <path d="M 400 680 Q 480 640 550 600 Q 610 550 650 520" stroke="#3D5841" stroke-width="2" fill="none" opacity="0.4" />
+        <!-- Word bubbles -->
+        <g>
+          <rect x="164" y="586" width="72" height="28" rx="14" fill="#F5F1E8" opacity="0.92" />
+          <text x="200" y="605" text-anchor="middle" font-family="Fraunces, serif" font-size="16" font-style="italic" font-weight="500" fill="#3D5841">story</text>
+        </g>
+        <g>
+          <rect x="214" y="526" width="72" height="28" rx="14" fill="#F5F1E8" opacity="0.92" />
+          <text x="250" y="545" text-anchor="middle" font-family="Fraunces, serif" font-size="16" font-style="italic" font-weight="500" fill="#3D5841">rhyme</text>
+        </g>
+        <g>
+          <rect x="514" y="586" width="72" height="28" rx="14" fill="#F5F1E8" opacity="0.92" />
+          <text x="550" y="605" text-anchor="middle" font-family="Fraunces, serif" font-size="16" font-style="italic" font-weight="500" fill="#3D5841">pet</text>
+        </g>
+        <g>
+          <rect x="564" y="526" width="72" height="28" rx="14" fill="#F5F1E8" opacity="0.92" />
+          <text x="600" y="545" text-anchor="middle" font-family="Fraunces, serif" font-size="16" font-style="italic" font-weight="500" fill="#3D5841">play</text>
+        </g>
+
+        <!-- PHONEME badges (above leaves) -->
+        <g>
+          <circle cx="358" cy="1180" r="14" fill="#E8C77D" stroke="#3D5841" stroke-width="2" />
+          <text x="358" y="1186" text-anchor="middle" font-family="Fraunces, serif" font-size="15" font-style="italic" font-weight="600" fill="#2A2E22">/t/</text>
+        </g>
+        <g>
+          <circle cx="446" cy="1110" r="14" fill="#E8C77D" stroke="#3D5841" stroke-width="2" />
+          <text x="446" y="1116" text-anchor="middle" font-family="Fraunces, serif" font-size="15" font-style="italic" font-weight="600" fill="#2A2E22">/p/</text>
+        </g>
+        <g>
+          <circle cx="358" cy="1040" r="14" fill="#E8C77D" stroke="#3D5841" stroke-width="2" />
+          <text x="358" y="1046" text-anchor="middle" font-family="Fraunces, serif" font-size="15" font-style="italic" font-weight="600" fill="#2A2E22">/d/</text>
+        </g>
+        <g>
+          <circle cx="446" cy="970" r="14" fill="#E8C77D" stroke="#3D5841" stroke-width="2" />
+          <text x="446" y="976" text-anchor="middle" font-family="Fraunces, serif" font-size="15" font-style="italic" font-weight="600" fill="#2A2E22">/b/</text>
+        </g>
+        <g>
+          <circle cx="358" cy="900" r="14" fill="#E8C77D" stroke="#3D5841" stroke-width="2" />
+          <text x="358" y="906" text-anchor="middle" font-family="Fraunces, serif" font-size="15" font-style="italic" font-weight="600" fill="#2A2E22">/s/</text>
+        </g>
+        <g>
+          <circle cx="446" cy="830" r="14" fill="#E8C77D" stroke="#3D5841" stroke-width="2" />
+          <text x="446" y="836" text-anchor="middle" font-family="Fraunces, serif" font-size="15" font-style="italic" font-weight="600" fill="#2A2E22">/k/</text>
+        </g>
+
+        <!-- BLOOM -->
+        <g transform="translate(400, 320)">
+          <g>
+            <ellipse cx="0" cy="-85" rx="42" ry="78" fill="#C97A56" opacity="0.92" transform="rotate(0)" />
+            <ellipse cx="0" cy="-85" rx="42" ry="78" fill="#C97A56" opacity="0.92" transform="rotate(45)" />
+            <ellipse cx="0" cy="-85" rx="42" ry="78" fill="#C97A56" opacity="0.92" transform="rotate(90)" />
+            <ellipse cx="0" cy="-85" rx="42" ry="78" fill="#C97A56" opacity="0.92" transform="rotate(135)" />
+            <ellipse cx="0" cy="-85" rx="42" ry="78" fill="#C97A56" opacity="0.92" transform="rotate(180)" />
+            <ellipse cx="0" cy="-85" rx="42" ry="78" fill="#C97A56" opacity="0.92" transform="rotate(225)" />
+            <ellipse cx="0" cy="-85" rx="42" ry="78" fill="#C97A56" opacity="0.92" transform="rotate(270)" />
+            <ellipse cx="0" cy="-85" rx="42" ry="78" fill="#C97A56" opacity="0.92" transform="rotate(315)" />
+          </g>
+          <g>
+            <ellipse cx="0" cy="-68" rx="30" ry="58" fill="#E8C77D" opacity="0.95" transform="rotate(22)" />
+            <ellipse cx="0" cy="-68" rx="30" ry="58" fill="#E8C77D" opacity="0.95" transform="rotate(67)" />
+            <ellipse cx="0" cy="-68" rx="30" ry="58" fill="#E8C77D" opacity="0.95" transform="rotate(112)" />
+            <ellipse cx="0" cy="-68" rx="30" ry="58" fill="#E8C77D" opacity="0.95" transform="rotate(157)" />
+            <ellipse cx="0" cy="-68" rx="30" ry="58" fill="#E8C77D" opacity="0.95" transform="rotate(202)" />
+            <ellipse cx="0" cy="-68" rx="30" ry="58" fill="#E8C77D" opacity="0.95" transform="rotate(247)" />
+            <ellipse cx="0" cy="-68" rx="30" ry="58" fill="#E8C77D" opacity="0.95" transform="rotate(292)" />
+            <ellipse cx="0" cy="-68" rx="30" ry="58" fill="#E8C77D" opacity="0.95" transform="rotate(337)" />
+          </g>
+          <circle cx="0" cy="0" r="44" fill="url(#bloomGrad)" />
+          <circle cx="0" cy="0" r="44" fill="none" stroke="#A55E3D" stroke-width="2" opacity="0.5" />
+          <circle cx="22"  cy="0"   r="4" fill="#D9AE5B" />
+          <circle cx="11"  cy="19"  r="4" fill="#D9AE5B" />
+          <circle cx="-11" cy="19"  r="4" fill="#D9AE5B" />
+          <circle cx="-22" cy="0"   r="4" fill="#D9AE5B" />
+          <circle cx="-11" cy="-19" r="4" fill="#D9AE5B" />
+          <circle cx="11"  cy="-19" r="4" fill="#D9AE5B" />
+          <circle cx="0" cy="0" r="8" fill="#A55E3D" />
+        </g>
+
+        <!-- NUMBER MARKERS -->
+        <g transform="translate(720, 1345)">
+          <circle r="32" fill="#FBF8F1" stroke="#3D5841" stroke-width="3" />
+          <text x="0" y="10" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="26" font-weight="500" fill="#3D5841">01</text>
+        </g>
+        <g transform="translate(700, 1059)">
+          <circle r="32" fill="#FBF8F1" stroke="#3D5841" stroke-width="3" />
+          <text x="0" y="10" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="26" font-weight="500" fill="#3D5841">02</text>
+        </g>
+        <g transform="translate(660, 798)">
+          <circle r="32" fill="#FBF8F1" stroke="#3D5841" stroke-width="3" />
+          <text x="0" y="10" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="26" font-weight="500" fill="#3D5841">03</text>
+        </g>
+        <g transform="translate(720, 542)">
+          <circle r="32" fill="#FBF8F1" stroke="#3D5841" stroke-width="3" />
+          <text x="0" y="10" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="26" font-weight="500" fill="#3D5841">04</text>
+        </g>
+        <g transform="translate(600, 202)">
+          <circle r="32" fill="#FBF8F1" stroke="#3D5841" stroke-width="3" />
+          <text x="0" y="10" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="26" font-weight="500" fill="#3D5841">05</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Cards (stacked, matching plant order: 05 at top, 01 at bottom) -->
+    <div class="cards-col">
+      <div class="pillar p5">
+        <div class="row"><div class="num">05</div><div class="name">Comprehension</div></div>
+        <div class="grid">
+          <div><div class="lbl means">What it means</div><div class="desc">Understanding, remembering, and actively interacting with what has been read.</div></div>
+          <div><div class="lbl matters">Why it matters</div><div class="desc muted">The ultimate goal of reading. Requires deep execution of background knowledge and critical thinking.</div></div>
+        </div>
+        <div class="foot">The bloom · why we plant in the first place.</div>
+      </div>
+
+      <div class="pillar p4">
+        <div class="row"><div class="num">04</div><div class="name">Vocabulary</div></div>
+        <div class="grid">
+          <div><div class="lbl means">What it means</div><div class="desc">Knowing — and fluidly accessing — the semantic meaning of words.</div></div>
+          <div><div class="lbl matters">Why it matters</div><div class="desc muted">If a child sounds out a word without knowing its meaning, the sentence loses all context.</div></div>
+        </div>
+      </div>
+
+      <div class="pillar p3">
+        <div class="row"><div class="num">03</div><div class="name">Fluency</div></div>
+        <div class="grid">
+          <div><div class="lbl means">What it means</div><div class="desc">Reading text accurately, rapidly, and with proper prosody — the expression and rhythm of a sentence.</div></div>
+          <div><div class="lbl matters">Why it matters</div><div class="desc muted">The bridge to comprehension. Automaticity frees up vital cognitive space to focus on meaning.</div></div>
+        </div>
+      </div>
+
+      <div class="pillar p2">
+        <div class="row"><div class="num">02</div><div class="name">Phonics &amp; Phonemic Awareness</div></div>
+        <div class="grid">
+          <div><div class="lbl means">What it means</div><div class="desc">Mapping speech sounds to letters, then blending those phonemes back into whole words.</div></div>
+          <div><div class="lbl matters">Why it matters</div><div class="desc muted">The core code-breaking mechanism. Empowers learners to sound out unfamiliar words without guessing.</div></div>
+        </div>
+      </div>
+
+      <div class="pillar p1">
+        <div class="row"><div class="num">01</div><div class="name">Oral Language</div></div>
+        <div class="grid">
+          <div><div class="lbl means">What it means</div><div class="desc">Listening to language all around them, then learning to speak it. Listening → Speaking, in that order.</div></div>
+          <div><div class="lbl matters">Why it matters</div><div class="desc muted">The true root system for all literacy development. Must build orally before written mechanics anchor.</div></div>
+        </div>
+        <div class="foot">Foundation · everything else grows from here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="foot-strip">
+    <div class="left">
+      <svg width="22" height="22" viewBox="0 0 64 64" fill="none">
+        <path d="M32 58 Q32 44 32 30" stroke="#3D5841" stroke-width="3.5" stroke-linecap="round" />
+        <path d="M32 36 Q44 32 50 22 Q42 22 36 28 Q32 32 32 36" fill="#3D5841" />
+        <path d="M32 28 Q24 26 18 18 Q24 18 28 22 Q32 24 32 28" fill="#3D5841" />
+        <path d="M22 62 Q32 58 42 62" stroke="#7A4F2E" stroke-width="2" stroke-linecap="round" />
+        <circle cx="32" cy="22" r="3" fill="#C97A56" />
+      </svg>
+      <div class="tag">Made with love · by an SLP</div>
+    </div>
+    <div class="url">soundsprouts.org/reading_pillars</div>
+  </div>
+
+</div>
+
+</body>
+</html>
