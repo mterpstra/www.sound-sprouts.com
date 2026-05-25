@@ -1,10 +1,24 @@
 .about-the-author {
-   background:rgb(71, 139, 186);
-   flex-direction:row;
-   align-items:center;
+   background: var(--ss-paper);
+   flex-direction: row;
+   align-items: center;
 }
 
-.about-the-author img {
-   border:50px outset rgb(43, 24, 17);
-   height:400px;
+.about-the-author h2 {
+   color: var(--ss-moss-deep);
+}
+
+.about-the-author p {
+   color: var(--ss-ink-soft);
+}
+
+.about-the-author > img {
+   height: 380px;
+   width: 380px;
+   border-radius: 50%;
+   object-fit: cover;
+   object-position: center top;
+   border: 3px solid var(--ss-sprout);
+   box-shadow: 0 8px 24px rgba(28, 30, 22, 0.12);
+   flex-shrink: 0;
 }

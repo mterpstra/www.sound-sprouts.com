@@ -1,144 +1,193 @@
-@font-face {
-   font-family: unkempt;
-   src: url(../fonts/Unkempt-Regular.ttf);
+/* Global reset */
+*, *::before, *::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
-* {
-   margin:0;
-   padding:0;
+html {
+   scroll-behavior: smooth;
 }
 
-p, h1 {
-   font-family:
-   "Proxima Nova",
-   -apple-system,
-   BlinkMacSystemFont,
-   Segoe UI,
-   "Helvetica Neue",
-   Arial,
-   "Noto Sans",
-   sans-serif,
-   "Apple Color Emoji",
-   "Segoe UI Emoji",
-   "Segoe UI Symbol",
-   "Noto Color Emoji";
+body {
+   background: var(--ss-paper);
+   color: var(--ss-ink);
+   font-family: var(--ss-font-body);
+   font-size: var(--ss-text-base);
+   line-height: var(--ss-leading-normal);
+   -webkit-font-smoothing: antialiased;
+}
 
-   color:white;
+/* ── Type ─────────────────────────────────── */
+
+h1, h2, h3 {
+   font-family: var(--ss-font-display);
+   font-weight: 400;
 }
 
 h2 {
-   font-family:unkempt;
-   color:white;
-   letter-spacing: 0.1em;
+   font-size: 1.75rem;
+   letter-spacing: var(--ss-tracking-h2);
+   margin-bottom: var(--ss-space-4);
 }
 
 p {
-   font-size:16px;
-   line-height:24px;
-   text-align:justify;
+   font-family: var(--ss-font-body);
+   font-size: var(--ss-text-base);
+   line-height: var(--ss-leading-normal);
+   color: var(--ss-ink-soft);
 }
 
+/* ── Sections ─────────────────────────────── */
+
 section {
-   padding:50px;
-   display:flex;
-   gap:50px;
-   flex-direction:row;
+   padding: var(--ss-space-8);
+   display: flex;
+   gap: var(--ss-space-8);
+   flex-direction: row;
 }
 
 section h2 {
-   margin-bottom:20px;
+   margin-bottom: var(--ss-space-4);
 }
 
-.hide {
-   visibility:hidden;
+/* ── Buttons ──────────────────────────────── */
+
+.btn {
+   display: inline-flex;
+   align-items: center;
+   gap: var(--ss-space-2);
+   border-radius: var(--ss-radius-pill);
+   font-family: var(--ss-font-body);
+   font-weight: 600;
+   font-size: 15px;
+   cursor: pointer;
+   border: none;
+   text-decoration: none;
+   transition: filter 0.15s, background 0.15s;
+   padding: 16px 28px;
+   white-space: nowrap;
 }
 
-.show {
-   visibility:visible;
+/* Primary — moss deep */
+.btn-primary {
+   background: var(--ss-moss-deep);
+   color: var(--ss-paper);
+}
+.btn-primary:hover { filter: brightness(1.1); }
+
+/* Paper — for use on dark (moss) backgrounds */
+.btn-paper {
+   display: inline-flex;
+   align-items: center;
+   gap: var(--ss-space-2);
+   background: var(--ss-paper);
+   color: var(--ss-moss-deep);
+   border-radius: var(--ss-radius-pill);
+   font-family: var(--ss-font-body);
+   font-weight: 600;
+   font-size: 15px;
+   padding: 16px 28px;
+   text-decoration: none;
+   border: none;
+   transition: filter 0.15s;
+   white-space: nowrap;
+}
+.btn-paper:hover { filter: brightness(0.95); }
+
+/* Outline light — for use on dark (moss) backgrounds */
+.btn-outline-light {
+   display: inline-flex;
+   align-items: center;
+   background: transparent;
+   color: var(--ss-paper);
+   border: 1.5px solid rgba(251, 248, 241, 0.6);
+   border-radius: var(--ss-radius-pill);
+   font-family: var(--ss-font-body);
+   font-weight: 600;
+   font-size: 15px;
+   padding: 14.5px 26.5px;
+   text-decoration: none;
+   transition: background 0.15s;
+   white-space: nowrap;
+}
+.btn-outline-light:hover { background: rgba(251, 248, 241, 0.12); }
+
+/* Nav button */
+.btn-nav {
+   display: inline-flex;
+   align-items: center;
+   background: var(--ss-moss-deep);
+   color: var(--ss-paper);
+   border-radius: var(--ss-radius-pill);
+   font-family: var(--ss-font-body);
+   font-weight: 600;
+   font-size: 13px;
+   padding: 10px 18px;
+   text-decoration: none;
+   border: none;
+   transition: filter 0.15s;
+   white-space: nowrap;
+}
+.btn-nav:hover { filter: brightness(1.1); }
+
+/* Text button */
+.btn-text {
+   display: inline-flex;
+   align-items: center;
+   background: none;
+   border: none;
+   color: var(--ss-ink);
+   padding: 16px 8px;
+   font-family: var(--ss-font-body);
+   font-weight: 600;
+   font-size: 15px;
+   text-decoration: underline;
+   text-underline-offset: 4px;
+   cursor: pointer;
+   text-decoration-color: rgba(42, 46, 34, 0.35);
+   transition: text-decoration-color 0.15s;
+}
+.btn-text:hover { text-decoration-color: var(--ss-ink); }
+
+/* ── Button groups ────────────────────────── */
+
+.button-set {
+   margin-top: var(--ss-space-5);
+   display: flex;
+   flex-direction: row;
+   gap: var(--ss-space-4);
+   flex-wrap: wrap;
+   align-items: center;
 }
 
-.hidden {
-   display:none;
-}
+/* ── Book preview widget ──────────────────── */
 
 .book {
-   position:relative;
+   position: relative;
 }
 
 .book button {
-   height:50px;
-   position:absolute;
+   position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   background:linear-gradient( rgb(71, 139, 186), rgb(63, 113, 147));
-   border:2px solid rgb(44, 24, 12);
-   opacity:0.9;
-   border-radius:10px;
-   color:white;
-   font-size:16px;
-   padding:12px 30px;
-   text-decoration:underline;
+   background: var(--ss-moss-deep);
+   border: none;
+   border-radius: var(--ss-radius-pill);
+   color: var(--ss-paper);
+   font-family: var(--ss-font-body);
+   font-size: 14px;
+   font-weight: 600;
+   padding: 10px 22px;
+   cursor: pointer;
+   transition: filter 0.15s;
+   white-space: nowrap;
 }
+.book button:hover { filter: brightness(1.1); }
 
-.book button:hover {
-   cursor:pointer;
-}
+/* ── Utilities ────────────────────────────── */
 
-.header {
-   position:absolute;
-   width:100%;
-   z-index:1;
-}
-
-.header a {
-   color: #2f740a;
-   float:right;
-   padding:10px;
-}
-
-.header a:hover {
-   text-decoration:none;
-}
-
-.header img {
-   position:absolute;
-   top:10px;
-   left:10px;
-}
-
-.button-set {
-   margin-top:20px;
-   display:flex;
-   flex-direction:row;
-   justify-content:space-evenly;
-   gap:20px;
-}
-
-.brown-button a {
-   display:inline-block;
-   background:linear-gradient(rgb(150, 95, 63), rgb(95, 62, 43));
-   border:2px solid rgb(44, 24, 12);
-   border-radius:10px;
-   color:white;
-   font-size:16px;
-   padding:12px 30px;
-   text-align:center;
-   white-space:nowrap;
-}
-
-.brown-button a:hover {
-   cursor:pointer;
-   text-shadow: 2px 2px 10px black;
-}
-
-#flowers {
-   background-image: url("../images/flowers.png");
-   background-repeat:repeat-x;
-   background-position:bottom;
-   height:600px;
-   width:100%;
-   position: absolute;
-   bottom: 0px;
-   opacity: 0.15;
-}
+.hide   { visibility: hidden; }
+.show   { visibility: visible; }
+.hidden { display: none; }

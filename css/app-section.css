@@ -1,0 +1,39 @@
+.app-section {
+   background: var(--ss-cream);
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: var(--ss-space-8);
+}
+
+.app-section h2 {
+   color: var(--ss-moss-deep);
+}
+
+.app-section p {
+   color: var(--ss-ink-soft);
+   margin-bottom: var(--ss-space-5);
+}
+
+.app-logo {
+   flex-shrink: 0;
+   width: 220px;
+   height: 220px;
+   border-radius: 50%;
+   border: 3px solid var(--ss-sprout);
+   box-shadow: 0 8px 24px rgba(28, 30, 22, 0.12);
+   object-fit: cover;
+}
+
+.coming-soon-badge {
+   display: inline-flex;
+   align-items: center;
+   padding: 12px 28px;
+   background: var(--ss-terracotta);
+   color: var(--ss-paper);
+   border-radius: var(--ss-radius-pill);
+   font-family: var(--ss-font-body);
+   font-size: 15px;
+   font-weight: 600;
+   letter-spacing: 0.3px;
+}

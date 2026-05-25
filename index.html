@@ -1,137 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
-      <meta name="theme-color" content="#e1f6e1">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Sound Sprouts.  Because sounds lead to words and words lead to sentences. By Author: Carol Terpstra.</title>
-      <meta name="description" content="Sound Sprouts offers children books series written by a speech therapist Carol Terpstra.  These books are where speech, sounds, language and literacy skills meet.">
-      <link rel="stylesheet" type="text/css" href="css/base.css">
-      <link rel="stylesheet" type="text/css" href="css/landing-page.css">
-      <link rel="stylesheet" type="text/css" href="css/about-the-author.css">
-      <link rel="stylesheet" type="text/css" href="css/dedes-pet-shop.css">
-      <link rel="stylesheet" type="text/css" href="css/papas-pool.css">
-      <link rel="stylesheet" type="text/css" href="css/ven-diagram.css">
-      <link rel="stylesheet" type="text/css" href="css/footer.css">
-      <link rel="stylesheet" type="text/css" href="css/mobile.css">
-      <script src="js/sound-sprouts.js"></script>
-   </head>
-   <body>
-      <div class="header">
-         <img src='images/logo-small.png' alt="Sound Sprouts Logo">
-         <a href="mailto:luzterpstra@gmail.com">Contact Us</a>
-         <a href="resources.html" target="_self">Resources</a>
+<head>
+   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+   <meta name="theme-color" content="#FBF8F1">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sound Sprouts — Because sounds lead to words and words lead to sentences.</title>
+   <meta name="description" content="Sound Sprouts is a children's book series written by speech-language pathologist Carol Terpstra, where speech, language, and literacy skills meet.">
+   <link rel="stylesheet" href="design_handoff_sound_sprouts/assets/tokens.css">
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/landing-page.css">
+   <link rel="stylesheet" href="css/about-the-author.css">
+   <link rel="stylesheet" href="css/dedes-pet-shop.css">
+   <link rel="stylesheet" href="css/papas-pool.css">
+   <link rel="stylesheet" href="css/ven-diagram.css">
+   <link rel="stylesheet" href="css/app-section.css">
+   <link rel="stylesheet" href="css/footer.css">
+   <link rel="stylesheet" href="css/mobile.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300..700&display=swap" rel="stylesheet">
+   <script src="js/sound-sprouts.js"></script>
+</head>
+<body>
+
+   <!-- Nav + Hero share the cream background -->
+   <div class="page-top">
+
+      <nav class="site-nav">
+         <a href="/" class="nav-logo">
+            <img src="images/sound-sprouts-logo.svg" alt="Sound Sprouts mark" class="nav-logo-mark">
+            <span class="wordmark">Sound <em>Sprouts</em></span>
+         </a>
+         <div class="nav-links">
+            <a href="#books">The Books</a>
+            <a href="#about">About Carol</a>
+            <a href="resources.html">Resources</a>
+            <a href="mailto:luzterpstra@gmail.com">Contact</a>
+         </div>
+         <a href="https://a.co/d/e0UVRkX" class="btn-nav" target="_blank">Buy Now</a>
+      </nav>
+
+      <section class="hero">
+
+         <!-- Decorative botanical (top-left corner) -->
+         <div class="hero-botanical" aria-hidden="true">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M100 180 Q100 130 80 100 Q60 70 80 40 Q100 70 100 110" stroke="#3D5841" stroke-width="1.5" fill="none"/>
+               <path d="M100 140 Q130 120 145 90 Q120 100 100 130" fill="#6B8A6E" opacity="0.6"/>
+               <path d="M100 110 Q70 95 55 70 Q80 80 100 100" fill="#6B8A6E" opacity="0.6"/>
+               <circle cx="145" cy="55" r="6" fill="#C97A56" opacity="0.7"/>
+            </svg>
+         </div>
+
+         <!-- Left: copy + CTAs -->
+         <div class="hero-copy">
+
+            <div class="eyebrow-chip">
+               &bull; Made with love &bull; by an SLP
+            </div>
+
+            <h1 class="hero-h1">
+               Because sounds<br>
+               lead to <em>words</em>,<br>
+               and words to <em class="accent">sentences</em>.
+            </h1>
+
+            <p class="hero-lead">A children's book series where speech, language, and literacy meet. Each story focuses on a set of sounds, packed with rhyme, playful characters, and the early skills kids need to grow.</p>
+
+            <div class="cta-row">
+               <a href="https://a.co/d/e0UVRkX" class="btn btn-primary" target="_blank">
+                  Shop the Series
+                  <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+               </a>
+               <a href="#about" class="btn-text">Meet Carol</a>
+            </div>
+
+            <div class="stats-row">
+               <div class="stat">
+                  <span class="stat-num">25+</span>
+                  <span class="stat-label">years in practice</span>
+               </div>
+               <div class="stat">
+                  <span class="stat-num">2</span>
+                  <span class="stat-label">books in series</span>
+               </div>
+               <div class="stat">
+                  <span class="stat-num">3&#8211;7</span>
+                  <span class="stat-label">ages</span>
+               </div>
+            </div>
+
+         </div>
+
+         <!-- Right: book stack -->
+         <div class="hero-books">
+            <div class="book-halo"></div>
+            <img src="images/papas-pool-cover.png" alt="Papa's Pool Rules — coming soon" class="book-img book-back">
+            <img src="images/dedes-petshop-cover.png" alt="Dede's Pet Shop — out now" class="book-img book-front">
+            <div class="phoneme-badge badge-t">/t/</div>
+            <div class="phoneme-badge badge-d">/d/</div>
+         </div>
+
+      </section>
+   </div>
+
+   <!-- About the Author -->
+   <section class="about-the-author" id="about">
+      <img src="images/carol-professional.jpg" alt="Carol Terpstra, Author and Speech-Language Pathologist">
+      <div>
+         <h2>I&#39;m L. Caroline Terpstra</h2>
+         <p>Hi there! I am a speech-language pathologist who has been working
+         in the profession for over twenty-five years. Throughout my practice,
+         I found myself often reaching for books when introducing new concepts,
+         particularly with the younger children. But, I always felt it would be
+         fantastic, if the books would have a predetermined set of goals with
+         fun story lines. No brainer books! My love of books and literacy
+         prompted the idea of writing a book series. It gave me the opportunity
+         to pack into them early learning skills that are essential in a child's
+         development of speech sounds, language, and literacy.
+         </p>
       </div>
-      <section class="landing-page">
-         <div id="flowers"></div>
-         <h1>Sound Sprouts</h1>
-         <div class="slogan">
-            <div id="animation-container">
-               <div id="destTop">
-                  <p>Because sounds lead to words</p>
-               </div>
-               <div id="destBot">
-                  <p>and words lead to sentences.</p>
-               </div>
-            </div>
-         </div>
-      </section>
+   </section>
 
-      <section class="about-the-author">
-         <img src="images/carol-professional.jpg" alt="Carol Terpstra Author">
-         <div>
-            <h2>I&#39;m L. Caroline Terpstra</h2>
-            <p>Hi there! I am a speech-language pathologist who has been working
-            in the profession for over twenty-five years. Throughout my practice, 
-            I found myself often reaching for books when introducing new concepts, 
-            particularly with the younger children. But, I always felt it would be 
-            fantastic, if the books would have a predetermined set of goals with 
-            fun story lines. No brainer books! My love of books and literacy 
-            prompted the idea of writing a book series. It gave me the opportunity 
-            to pack into them early learning skills that are essential in a child's 
-            development of speech sounds, language, and literacy.
-            </p>
+   <!-- Venn Diagram -->
+   <section class="ven-diagram">
+      <div class="ven-diagram-container">
+         <div class="circle" id="left-circle">
+            <div><h2>Children's<br>Author</h2></div>
+            <div><p>Engaging<br>Storylines</p></div>
+            <div><p>Playful<br>Illustrations</p></div>
+            <div><p>Child-Based<br>Themes</p></div>
+            <div><p>Rhyming<br>Words</p></div>
          </div>
-      </section>
+         <div class="circle" id="right-circle">
+            <div><h2>Speech<br>Therapist</h2></div>
+            <div><p>Sound<br>Development</p></div>
+            <div><p>Listening<br>Comprehension</p></div>
+            <div><p>Facilitate<br>Vocabulary</p></div>
+            <div><p>Reading<br>Comprehension</p></div>
+            <div><p>Phonemic<br>Awareness</p></div>
+         </div>
+         <div id="center-of-diagram">
+            <h2>Sound<br>Sprouts</h2>
+         </div>
+      </div>
+   </section>
 
-      <section class=ven-diagram>
-         <div class="ven-diagram-container">
-            <div class="circle" id="left-circle">
-               <div><h2>Children's<br>Author</h2></div>
-               <div><p>Engaging<br>Storylines</p></div>
-               <div><p>Playful<br>Illustrations</p></div>
-               <div><p>Child-Based<br>Themes</p></div>
-               <div><p>Rhyming<br>Words</p></div>
-            </div>
-            <div class="circle" id="right-circle">
-               <div><h2>Speech<br>Therapist</h2></div>
-               <div><p>Sound<br>Development</p></div>
-               <div><p>Listening<br>Comprehension</p></div>
-               <div><p>Facilitate<br>Vocabulary</p></div>
-               <div><p>Reading<br>Comprehension</p></div>
-               <div><p>Phonemic<br>Awareness</p></div>
-            </div>
-            <div id="center-of-diagram">
-               <h2>Sound<br>Sprouts</h2>
-            </div>
+   <!-- Dede's Pet Shop -->
+   <section class="dedes-pet-shop" id="books">
+      <div>
+         <h2>Welcome to Dede&#39;s Pet Shop</h2>
+         <p>Discover a world of family fun and adventure
+         at Dede&#39;s Pet Shop! Each Sound Sprouts book
+         features a set of sounds found in different positions
+         of words. In Dede&#39;s Pet Shop the /T/ and /D/ sounds
+         are the focus throughout, as Tommy, Daisy, and Dad
+         embark on an exciting quest to find their perfect pet.
+         With colorful illustrations, rhymes, and delightful
+         characters, this charming children's book brings the
+         magic of language and joy of reading to life.</p>
+         <div class="button-set">
+            <a href="https://a.co/d/e0UVRkX" target="_blank" class="btn btn-paper">Buy Now</a>
+            <a href="resources.html" class="btn btn-outline-light">Resources</a>
          </div>
-      </section>
+      </div>
+      <div class="book">
+         <img src="images/dedes-petshop-page.png" alt="Dede's Pet Shop Book">
+         <img src="images/dedes-petshop-page-with-words.png" class="hidden" alt="Dede's Pet Shop Inside">
+         <button>Inside</button>
+      </div>
+   </section>
 
-      <section class="dedes-pet-shop">
-         <div>
-            <h2>Welcome to Dede&#39;s Pet Shop</h2>
-            <p>
-            Discover a world of family fun and adventure
-            at Dede&#39;s Pet Shop! Each Sound Sprouts book
-            features a set of sounds that are found in different
-            positions of words. In Dede&#39;s Pet Shop you will find
-            the /T/ and /D/ sounds are the focus throughout,
-            as Tommy, Daisy, and Dad embark on an exciting
-            quest to find their perfect pet. With colorful
-            illustrations, rhymes, and delightful characters,
-            this charming children’s book brings the magic of
-            language and joy of reading to life.
-            </p>
-            <div class="button-set">
-               <div class="buy-now brown-button">
-                  <a href="https://a.co/d/e0UVRkX" target="_blank">Buy Now</a>
-               </div>
-               <div class="brown-button">
-                  <a href="resources.html">Resources</a>
-               </div>
-            </div>
-         </div>
-         <div class="book">
-            <img src="images/dedes-petshop-page.png" alt="Dedes Petshop Book">
-            <img src="images/dedes-petshop-page-with-words.png" class="hidden" alt="Dedes Petshop Book Inside">
-            <button>Inside</button>
-         </div>
-      </section>
+   <!-- Papa's Pool -->
+   <section class="papas-pool">
+      <div class="book">
+         <img src="images/papas-pool-cover.png" alt="Papa's Pool Rules Book">
+         <img src="images/papas-pool-page-01.png" class="hidden" alt="Papa's Pool Rules Page 1">
+         <img src="images/papas-pool-page-02.png" class="hidden" alt="Papa's Pool Rules Page 2">
+         <img src="images/papas-pool-page-03.png" class="hidden" alt="Papa's Pool Rules Page 3">
+         <button>Inside</button>
+      </div>
+      <div>
+         <h2>Papa&#39;s Pool Rules &#8212; Coming Soon</h2>
+         <p>We're excited to give you a sneak peek into our second
+         book of the series. The sweet relationship between Papa
+         and his granddaughters is on full display as you read
+         this endearing story. It continues with our dedication to
+         facilitate the development of speech sounds with the
+         focus on P/B, as well as oral language and reading skills.</p>
+      </div>
+   </section>
 
-      <section class="papas-pool">
-         <div class="book">
-            <img src="images/papas-pool-cover.png" alt="Papas Pool Book">
-            <img src="images/papas-pool-page-01.png" class="hidden" alt="Papas Pool Book Page 1">
-            <img src="images/papas-pool-page-02.png" class="hidden" alt="Papas Pool Book Page 2">
-            <img src="images/papas-pool-page-03.png" class="hidden" alt="Papas Pool Book Page 3">
-            <button>Inside</button>
+   <!-- App Section -->
+   <section class="app-section">
+      <img src="images/new-logo.png" alt="Sound Sprouts App" class="app-logo">
+      <div>
+         <h2>Dede&#39;s Pet Shop &#8212; The App</h2>
+         <p>Bring the magic of Dede&#39;s Pet Shop to life! Children choose their
+         own pet, give it a name, then shop for food, a home, and toys &#8212;
+         before playing with their new best friend. A playful screen-time
+         experience built around the speech sounds and vocabulary from the book.</p>
+         <div class="button-set">
+            <span class="coming-soon-badge">Coming Soon</span>
          </div>
-         <div>
-            <h2>Papa's Pool Rules - Coming Soon</h2>
-            <p>
-            We’re excited to give you a sneak peek into our second 
-            book of the series.  The sweet relationship between Papa 
-            and his granddaughters is on full display as you read 
-            this endearing story.  It continues with our dedication to 
-            facilitate the development of speech sounds with the 
-            focus on P/B, as well as oral language, and reading skills.
-            </p>
-         </div>
-      </section>
+      </div>
+   </section>
 
-      <section class="footer">
-         <p>Copyright © 2024 Sound Sprouts LLC.  All rights reserved.</p>
-      </section>
+   <!-- Footer -->
+   <footer class="site-footer">
+      <p>Copyright &copy; 2024 Sound Sprouts LLC. All rights reserved.</p>
+   </footer>
 
-   </body>
+</body>
 </html>

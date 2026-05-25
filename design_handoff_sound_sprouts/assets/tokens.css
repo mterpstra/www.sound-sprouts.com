@@ -1,0 +1,65 @@
+/* Sound Sprouts — Design Tokens
+ * Drop into your stylesheet, or convert to your token format (Tailwind, CSS vars, JS module, etc.)
+ */
+
+:root {
+  /* ───── Colors ─────────────────────────────────────── */
+  /* Neutrals */
+  --ss-cream:        #F5F1E8;   /* Section backgrounds, cards */
+  --ss-paper:        #FBF8F1;   /* Page background */
+  --ss-ink:          #2A2E22;   /* Primary text on light bg */
+  --ss-ink-soft:     #5C5F50;   /* Secondary text, captions */
+
+  /* Brand */
+  --ss-sage:         #6B8A6E;   /* Mid-tone, secondary fills */
+  --ss-moss-deep:    #3D5841;   /* Primary brand color, headlines, primary buttons */
+  --ss-sprout:       #A8BFA0;   /* Soft tint, chip backgrounds */
+  --ss-terracotta:   #C97A56;   /* Accent color, secondary CTAs, "Sprouts" word */
+  --ss-butter:       #E8C77D;   /* Soft accent, hero halo, flower center */
+  --ss-soil:         #7A4F2E;   /* Logo soil hill — used only in the mark */
+
+  /* ───── Type scale ─────────────────────────────────── */
+  --ss-font-display: "Fraunces", "Cormorant Garamond", Georgia, serif;
+  --ss-font-body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ss-font-mono:    ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Sizes (rem assumes 16px root) */
+  --ss-text-xs:      0.6875rem;  /* 11px — eyebrow labels, micro-caps */
+  --ss-text-sm:      0.8125rem;  /* 13px — captions, meta */
+  --ss-text-base:    1rem;       /* 16px — body */
+  --ss-text-md:      1.0625rem;  /* 17px — hero lead paragraph */
+  --ss-text-lg:      1.5rem;     /* 24px — sub-headlines */
+  --ss-text-xl:      1.75rem;    /* 28px — pull quotes, blurbs */
+  --ss-text-2xl:     2rem;       /* 32px — stat numerals */
+  --ss-text-3xl:     2.75rem;    /* 44px — section titles */
+  --ss-text-4xl:     5.25rem;    /* 84px — hero headline (responsive: scale down on mobile) */
+
+  --ss-leading-tight:  0.98;
+  --ss-leading-snug:   1.25;
+  --ss-leading-normal: 1.55;
+  --ss-leading-loose:  1.65;
+
+  --ss-tracking-headline: -3px;   /* Hero h1 letter-spacing */
+  --ss-tracking-h2:       -0.3px;
+  --ss-tracking-eyebrow:   3px;   /* Uppercase eyebrow text */
+
+  /* ───── Radii ──────────────────────────────────────── */
+  --ss-radius-sm:    4px;
+  --ss-radius-md:    8px;
+  --ss-radius-pill:  999px;
+
+  /* ───── Spacing scale (4-px base) ──────────────────── */
+  --ss-space-1:  4px;
+  --ss-space-2:  8px;
+  --ss-space-3:  12px;
+  --ss-space-4:  16px;
+  --ss-space-5:  24px;
+  --ss-space-6:  32px;
+  --ss-space-7:  48px;
+  --ss-space-8:  64px;
+  --ss-space-9:  80px;
+
+  /* ───── Borders ────────────────────────────────────── */
+  --ss-border-hairline: 1px solid rgba(42, 46, 34, 0.13);   /* --ss-ink @ 13% */
+  --ss-border-strong:   1.5px solid var(--ss-moss-deep);
+}

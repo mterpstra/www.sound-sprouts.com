@@ -1,74 +1,99 @@
 @media only screen and (max-width: 1000px) {
 
-   .landing-page h1 {
-      font-size:80px;
+   /* Nav */
+   .site-nav {
+      padding: 20px 24px;
    }
 
-   .landing-page p {
-      font-size: 35px;
-      line-height: 55px;
+   .nav-links {
+      display: none;
    }
 
-   .about-the-author, .papas-pool {
-      flex-direction:column
+   /* Hero */
+   .hero {
+      grid-template-columns: 1fr;
+      padding: 32px 24px 48px;
+      gap: 40px;
+   }
+
+   .hero-h1 {
+      font-size: clamp(36px, 9vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+   }
+
+   .hero-botanical {
+      display: none;
+   }
+
+   .stats-row {
+      margin-top: 32px;
+      gap: 20px;
+   }
+
+   .hero-books {
+      height: 280px;
+   }
+
+   .book-halo {
+      width: 240px;
+      height: 240px;
+   }
+
+   .phoneme-badge { display: none; }
+
+   /* 220 × (2550/3300) = 170px */
+   .book-back {
+      width: 220px;
+      height: 170px;
+      transform: rotate(-6deg) translate(-65px, -35px);
+   }
+
+   /* 240 × (2048/2732) = 180px */
+   .book-front {
+      width: 240px;
+      height: 180px;
+      transform: rotate(4deg) translate(55px, 32px);
+   }
+
+   /* Sections */
+   .about-the-author,
+   .papas-pool {
+      flex-direction: column;
+      align-items: center;
    }
 
    .dedes-pet-shop {
-      flex-direction:column-reverse;
+      flex-direction: column-reverse;
    }
 
-   .about-the-author img, .dedes-pet-shop img, .papas-pool img {
-      object-fit:cover;
-      width:100%;
-      height:auto;
+   .about-the-author > img {
+      width: 80%;
+      max-width: 300px;
+      height: auto;
+      aspect-ratio: 1;
    }
 
-   .about-the-author img {
-      width:80%;
-      max-width:500px;
+   .dedes-pet-shop .book img {
+      width: 100%;
+      height: auto;
+      max-width: 400px;
    }
 
+   .papas-pool .book img {
+      width: 100%;
+      max-width: 100%;
+   }
+
+   /* Venn diagram */
    .ven-diagram-container {
-      flex-direction:column;
+      flex-direction: column;
    }
 
    .circle {
       aspect-ratio: 1/1;
-      width:80%;
-      max-width:400px;
-   }
-
-   .circle p {
-      font-size:14px;
-      line-height:18px;
-      margin-bottom:10px;
-   }
-
-   #left-circle {
-      transform: translate(0, 50px);
-   }
-
-   #left-circle div {
-      transform: translate(0, -40px);
-   }
-
-   #right-circle {
-      transform: translate(0, -50px);
-   }
-   #right-circle div {
-      transform: translate(0, 50px);
-   }
-
-   #center-of-diagram {
-      opacity:1;
-      background:none;
-   }
-
-   #center-of-diagram h2 {
-      font-size:30px;
-   }
-
-   .circle {
+      width: 80%;
+      max-width: 400px;
       display: flex;
       justify-content: space-evenly;
       flex-direction: row;
@@ -77,32 +102,53 @@
    }
 
    .circle h2 {
-      text-align:center;
+      text-align: center;
    }
 
    .circle div:first-child {
       flex-basis: 100%;
    }
 
-   .interactive-parts {
+   .circle p {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 10px;
+   }
+
+   #left-circle  { transform: translate(0, 50px); }
+   #left-circle div { transform: translate(0, -40px); }
+   #right-circle { transform: translate(0, -50px); }
+   #right-circle div { transform: translate(0, 50px); }
+
+   #center-of-diagram {
+      opacity: 1;
+      background: none;
+   }
+
+   #center-of-diagram h2 {
+      font-size: 1.5rem;
+   }
+
+   /* App section */
+   .app-section {
       flex-direction: column;
-      padding:50px;
-   }
-   .minimal-pairs {
-      flex-direction: column;
+      align-items: center;
+      text-align: center;
    }
 
-   .resources-intro {
-      padding-top:30px;
-      flex-direction:column;
+   .app-logo {
+      width: 160px;
+      height: 160px;
    }
 
-   .coloring-book {
-      flex-direction:column;
-   }
-   .coloring-book img {
-      max-width:100%;
+   .button-set {
+      justify-content: center;
    }
 
-
+   /* Resources page */
+   .interactive-parts  { flex-direction: column; padding: 50px; }
+   .minimal-pairs      { flex-direction: column; }
+   .resources-intro    { padding-top: 30px; flex-direction: column; }
+   .coloring-book      { flex-direction: column; }
+   .coloring-book img  { max-width: 100%; }
 }

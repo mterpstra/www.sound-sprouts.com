@@ -1,12 +1,15 @@
-.footer {
-   background: rgb(202, 199, 128);
-   flex-direction:column;
+.site-footer {
+   background: var(--ss-moss-deep);
+   display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
-   text-align:center;
+   text-align: center;
+   padding: 32px 64px;
 }
 
-.footer p {
-   color:white;
-   text-align:center;
+.site-footer p {
+   color: rgba(251, 248, 241, 0.6);
+   font-size: 13px;
+   text-align: center;
 }

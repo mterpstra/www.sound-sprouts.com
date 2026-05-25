@@ -60,6 +60,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
       return;
    }
 
+   if (!document.getElementById("destTop")) {
+      return;
+   }
+
    createDivsFromSlogan("destTop");
    createDivsFromSlogan("destBot");
 

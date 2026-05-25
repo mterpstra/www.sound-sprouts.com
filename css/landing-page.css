@@ -1,50 +1,241 @@
-@font-face {
-   font-family: dmSerifDisplay;
-   src: url(../fonts/DMSerifDisplay-Regular.ttf);
+/* ── Page top wrapper (nav + hero share cream bg) ── */
+
+.page-top {
+   background: var(--ss-cream);
+   position: relative;
+   overflow: hidden;
 }
 
-@font-face {
-   font-family: chewy;
-   src: url(../fonts/Chewy-Regular.ttf);
+/* ── Nav ─────────────────────────────────────────── */
+
+.site-nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 32px 80px;
+   position: relative;
+   /* override section defaults */
+   flex-direction: unset;
+   gap: 0;
 }
 
-.landing-page {
-   padding:0;
-   height:100vh;
-   background:linear-gradient(#e1f6e1, #2eb9da, #2f740a, #5c2d19);
-   flex-direction:column;
-   justify-content:center;
-   align-items:center;
-   position:relative;
+.nav-logo {
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   text-decoration: none;
 }
 
-.landing-page h1 {
-   color:#fffc00;
-   font-family:dmSeriDisplay;
-   font-size:100px;
-   -webkit-text-fill-color:#fffc00;
-   -webkit-text-stroke-width: 2px;
-   -webkit-text-stroke-color: #ff3800;
-   filter: drop-shadow(2px 2px #333);
-   letter-spacing: 8px;
-   text-shadow: 2px 2px 2px #555;
-   text-align:center;
+.nav-logo-mark {
+   height: 40px;
+   width: auto;
 }
 
-.landing-page p, .letter {
-   font-size: 45px;
-   line-height: 65px;
-   text-align:center;
-   font-family:"noteworthy";
-
-   background: -webkit-linear-gradient(#b9e8e0, #2bb9dc);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-
-   filter: drop-shadow(2px 2px #333);
-   letter-spacing:6px;
+.wordmark {
+   font-family: var(--ss-font-display);
+   font-style: italic;
+   font-weight: 500;
+   font-size: 26px;
+   color: var(--ss-moss-deep);
+   letter-spacing: -0.5px;
+   line-height: 1;
+   white-space: nowrap;
 }
 
-.letter {
-   position:absolute;
+.wordmark em {
+   font-style: italic;
+   color: var(--ss-terracotta);
+}
+
+.nav-links {
+   display: flex;
+   gap: 36px;
+   align-items: center;
+}
+
+.nav-links a {
+   font-family: var(--ss-font-body);
+   font-size: 14px;
+   font-weight: 500;
+   color: var(--ss-ink);
+   text-decoration: none;
+   transition: color 0.15s;
+}
+
+.nav-links a:hover {
+   color: var(--ss-moss-deep);
+}
+
+/* ── Hero ────────────────────────────────────────── */
+
+.hero {
+   display: grid;
+   grid-template-columns: 1.2fr 1fr;
+   gap: 64px;
+   padding: 40px 80px 80px;
+   align-items: center;
+   position: relative;
+   /* override default section flex */
+   flex-direction: unset;
+}
+
+/* Decorative botanical */
+.hero-botanical {
+   position: absolute;
+   left: -40px;
+   top: -20px;
+   width: 280px;
+   height: 280px;
+   opacity: 0.18;
+   pointer-events: none;
+}
+
+/* Eyebrow chip */
+.eyebrow-chip {
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   padding: 6px 14px 6px 10px;
+   background: rgba(168, 191, 160, 0.33);
+   color: var(--ss-moss-deep);
+   border-radius: var(--ss-radius-pill);
+   font-family: var(--ss-font-body);
+   font-size: 12px;
+   font-weight: 600;
+   letter-spacing: 0.4px;
+   margin-bottom: 28px;
+}
+
+/* Hero H1 */
+.hero-h1 {
+   font-family: var(--ss-font-display);
+   font-size: clamp(36px, 7vw, 84px);
+   font-weight: 400;
+   line-height: 0.98;
+   letter-spacing: -3px;
+   color: var(--ss-ink);
+   margin: 0 0 28px;
+}
+
+.hero-h1 em {
+   font-style: italic;
+   color: var(--ss-moss-deep);
+}
+
+.hero-h1 em.accent {
+   color: var(--ss-terracotta);
+}
+
+/* Lead paragraph */
+.hero-lead {
+   font-size: 17px;
+   line-height: 1.55;
+   color: var(--ss-ink-soft);
+   max-width: 480px;
+   margin-bottom: 36px;
+}
+
+/* CTA row */
+.cta-row {
+   display: flex;
+   gap: 14px;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+/* Stats */
+.stats-row {
+   display: flex;
+   gap: 32px;
+   margin-top: 56px;
+}
+
+.stat-num {
+   display: block;
+   font-family: var(--ss-font-display);
+   font-size: 32px;
+   font-weight: 500;
+   color: var(--ss-ink);
+   line-height: 1;
+}
+
+.stat-label {
+   display: block;
+   font-family: var(--ss-font-body);
+   font-size: 13px;
+   color: var(--ss-ink-soft);
+   margin-top: 4px;
+}
+
+/* ── Book stack ──────────────────────────────────── */
+
+.hero-books {
+   position: relative;
+   height: 420px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.book-halo {
+   position: absolute;
+   width: 360px;
+   height: 360px;
+   border-radius: 50%;
+   background: rgba(232, 199, 125, 0.33);
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.book-img {
+   position: absolute;
+   border-radius: 2px;
+   box-shadow: 0 12px 28px rgba(28, 30, 22, 0.12), 0 2px 6px rgba(28, 30, 22, 0.08);
+   object-fit: cover;
+}
+
+.book-back {
+   width: 280px;
+   height: 216px;
+   transform: rotate(-6deg) translate(-90px, -50px);
+   z-index: 1;
+}
+
+.book-front {
+   width: 320px;
+   height: 240px;
+   transform: rotate(4deg) translate(75px, 45px);
+   z-index: 2;
+}
+
+/* ── Phoneme badges ──────────────────────────────── */
+
+.phoneme-badge {
+   position: absolute;
+   width: 64px;
+   height: 64px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: var(--ss-font-display);
+   font-style: italic;
+   font-size: 18px;
+   font-weight: 500;
+   color: var(--ss-ink);
+   z-index: 4;
+   box-shadow: 0 4px 14px rgba(28, 30, 22, 0.18);
+}
+
+.badge-t {
+   background: var(--ss-butter);
+   top: 12%;
+   left: -6%;
+}
+
+.badge-d {
+   background: var(--ss-sprout);
+   bottom: 12%;
+   right: 6%;
 }

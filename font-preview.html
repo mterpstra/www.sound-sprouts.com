@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Font Preview — Sound Sprouts</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Delius+Swash+Caps&family=Peralta&family=Henny+Penny&display=swap" rel="stylesheet">
+   <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+         background: #1a1a1a;
+         font-family: sans-serif;
+         padding: 40px 20px;
+      }
+
+      h1.page-title {
+         text-align: center;
+         color: #aaa;
+         font-size: 14px;
+         letter-spacing: 3px;
+         text-transform: uppercase;
+         margin-bottom: 40px;
+      }
+
+      .card {
+         max-width: 860px;
+         margin: 0 auto 48px;
+         border-radius: 20px;
+         overflow: hidden;
+         box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+      }
+
+      .card-label {
+         background: #2a2a2a;
+         color: #888;
+         font-size: 12px;
+         letter-spacing: 2px;
+         text-transform: uppercase;
+         padding: 10px 24px;
+      }
+
+      /* Dark background swatch — matches the site's landing page feel */
+      .swatch-dark {
+         background: linear-gradient(160deg, #2eb9da 0%, #2f740a 60%, #5c2d19 100%);
+         padding: 50px 40px;
+         text-align: center;
+      }
+
+      /* Light background swatch — cream like the about section */
+      .swatch-light {
+         background: linear-gradient(135deg, #fefde8 0%, #ddf3fc 100%);
+         padding: 40px 40px;
+         text-align: center;
+      }
+
+      .swatch-label {
+         font-size: 11px;
+         letter-spacing: 2px;
+         text-transform: uppercase;
+         margin-bottom: 14px;
+         opacity: 0.6;
+      }
+
+      .swatch-dark .swatch-label { color: white; }
+      .swatch-light .swatch-label { color: #555; }
+
+      /* The three fonts */
+      .font-fleur      { font-family: 'Fleur De Leah', cursive; }
+      .font-delius     { font-family: 'Delius Swash Caps', cursive; }
+      .font-peralta    { font-family: 'Peralta', serif; }
+      .font-henny      { font-family: 'Henny Penny', cursive; }
+
+      /* Dark swatch text treatment — yellow/orange like current site */
+      .swatch-dark .title-text {
+         font-size: clamp(54px, 8vw, 96px);
+         color: #ffcd00;
+         -webkit-text-fill-color: #ffcd00;
+         -webkit-text-stroke-width: 0.1px;
+         -webkit-text-stroke-color: #ff4800;
+         filter: drop-shadow(3px 3px #333);
+         letter-spacing: 6px;
+         line-height: 1.2;
+      }
+
+      /* Light swatch text — green, no stroke */
+      .swatch-light .title-text {
+         font-size: clamp(48px, 7vw, 86px);
+         color: #2f740a;
+         letter-spacing: 4px;
+         line-height: 1.2;
+      }
+
+      /* Plain white option */
+      .swatch-dark .title-text-white {
+         font-size: clamp(54px, 8vw, 96px);
+         color: white;
+         letter-spacing: 6px;
+         line-height: 1.2;
+         opacity: 0.95;
+      }
+
+      .divider {
+         height: 1px;
+         background: rgba(255,255,255,0.15);
+      }
+   </style>
+</head>
+<body>
+
+   <h1 class="page-title">Sound Sprouts — Title Font Preview</h1>
+
+   <!-- FLEUR DE LEAH -->
+   <div class="card">
+      <div class="card-label">1 &nbsp;·&nbsp; Fleur De Leah &nbsp;·&nbsp; formal script with floral embellishments</div>
+
+      <div class="swatch-dark">
+         <div class="swatch-label">on dark gradient · yellow + orange-red</div>
+         <div class="title-text font-fleur">Sound Sprouts</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="swatch-light">
+         <div class="swatch-label">on cream · dark green</div>
+         <div class="title-text font-fleur">Sound Sprouts</div>
+      </div>
+   </div>
+
+   <!-- DELIUS SWASH CAPS -->
+   <div class="card">
+      <div class="card-label">2 &nbsp;·&nbsp; Delius Swash Caps &nbsp;·&nbsp; comic-book lettering, decorative swash capitals</div>
+
+      <div class="swatch-dark">
+         <div class="swatch-label">on dark gradient · yellow + orange-red</div>
+         <div class="title-text font-delius">Sound Sprouts</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="swatch-light">
+         <div class="swatch-label">on cream · dark green</div>
+         <div class="title-text font-delius">Sound Sprouts</div>
+      </div>
+   </div>
+
+   <!-- PERALTA -->
+   <div class="card">
+      <div class="card-label">3 &nbsp;·&nbsp; Peralta &nbsp;·&nbsp; slab serif "gone haywire", bold and offbeat</div>
+
+      <div class="swatch-dark">
+         <div class="swatch-label">on dark gradient · yellow + orange-red</div>
+         <div class="title-text font-peralta">Sound Sprouts</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="swatch-light">
+         <div class="swatch-label">on cream · dark green</div>
+         <div class="title-text font-peralta">Sound Sprouts</div>
+      </div>
+   </div>
+
+   <!-- HENNY PENNY -->
+   <div class="card">
+      <div class="card-label">4 &nbsp;·&nbsp; Henny Penny &nbsp;·&nbsp; no common baseline or slope — pure intentional whimsy, designed for children's books</div>
+
+      <div class="swatch-dark">
+         <div class="swatch-label">on dark gradient · yellow + orange-red</div>
+         <div class="title-text font-henny">Sound Sprouts</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="swatch-light">
+         <div class="swatch-label">on cream · dark green</div>
+         <div class="title-text font-henny">Sound Sprouts</div>
+      </div>
+   </div>
+
+   <!-- SIDE BY SIDE comparison at smaller size -->
+   <div class="card">
+      <div class="card-label">Side-by-side comparison</div>
+      <div class="swatch-dark" style="display:flex; flex-direction:column; gap:24px; align-items:center;">
+         <div style="text-align:center;">
+            <div class="swatch-label" style="margin-bottom:6px;">Fleur De Leah</div>
+            <div class="title-text font-fleur" style="font-size:clamp(36px,5vw,64px);">Sound Sprouts</div>
+         </div>
+         <div style="text-align:center;">
+            <div class="swatch-label" style="margin-bottom:6px;">Delius Swash Caps</div>
+            <div class="title-text font-delius" style="font-size:clamp(36px,5vw,64px);">Sound Sprouts</div>
+         </div>
+         <div style="text-align:center;">
+            <div class="swatch-label" style="margin-bottom:6px;">Peralta</div>
+            <div class="title-text font-peralta" style="font-size:clamp(36px,5vw,64px);">Sound Sprouts</div>
+         </div>
+         <div style="text-align:center;">
+            <div class="swatch-label" style="margin-bottom:6px;">Henny Penny</div>
+            <div class="title-text font-henny" style="font-size:clamp(36px,5vw,64px);">Sound Sprouts</div>
+         </div>
+      </div>
+   </div>
+
+</body>
+</html>
