@@ -42,15 +42,13 @@
 
    .phoneme-badge { display: none; }
 
-   /* 220 × (2550/3300) = 170px */
-   .book-back {
+   .book-papas-pool {
       width: 220px;
       height: 170px;
       transform: rotate(-6deg) translate(-65px, -35px);
    }
 
-   /* 240 × (2048/2732) = 180px */
-   .book-front {
+   .book-dedes-petshop {
       width: 240px;
       height: 180px;
       transform: rotate(4deg) translate(55px, 32px);
